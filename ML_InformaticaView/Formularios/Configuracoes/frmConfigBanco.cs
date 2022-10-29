@@ -63,5 +63,14 @@ namespace ML_InformaticaView.Formularios.Configuracoes
         Mensagem.MostraErro(ex.Message);
       }
 }
+
+        private void buttonEdit1_Click(object sender, EventArgs e)
+        {
+            var ret = neg.TestarConexaoBanco();
+            if (ret.ToUpper() == "OK")
+                Mensagem.MostraAviso("Teste com sucesso");
+            else
+                Mensagem.MostraAviso("Teste falhou");
+        }
     }
 }

@@ -584,6 +584,7 @@
             this.buttonEdit1.Text = "   Testar Conexão";
             this.buttonEdit1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEdit1.UseVisualStyleBackColor = false;
+            this.buttonEdit1.Click += new System.EventHandler(this.buttonEdit1_Click);
             // 
             // frmConfigBanco
             // 
