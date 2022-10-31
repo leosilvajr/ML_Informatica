@@ -48,6 +48,7 @@
     <Compile Include="EnumsEntidade.cs" />
     <Compile Include="ItensComboBoxEntidade.cs" />
     <Compile Include="JsonGeneric.cs" />
+    <Compile Include="MunicipioEntidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

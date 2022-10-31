@@ -42,12 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfiguracaoBancoNegocio.cs" />
+    <Compile Include="MunicipioNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ML_Informatica.Dal\ML_InformaticaDal.csproj">
       <Project>{31bb32d1-5998-42bd-9dde-65c5e9c1aa05}</Project>
       <Name>ML_InformaticaDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ML_InformaticaEntidades\ML_InformaticaEntidades.csproj">
+      <Project>{93a5461e-17cc-4782-ab86-ab2f0f538d20}</Project>
+      <Name>ML_InformaticaEntidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
