@@ -84,9 +84,7 @@
       // 
       // txtPesquisa
       // 
-      this.txtPesquisa.BackColor = System.Drawing.Color.White;
       this.txtPesquisa.Font = new System.Drawing.Font("Arial", 8F);
-      this.txtPesquisa.ForeColor = System.Drawing.Color.Black;
       this.txtPesquisa.Location = new System.Drawing.Point(5, 68);
       this.txtPesquisa.Name = "txtPesquisa";
       this.txtPesquisa.PromptChar = ' ';
@@ -119,7 +117,9 @@
       this.txtPesquisa.PrtValorPadrao = null;
       this.txtPesquisa.Size = new System.Drawing.Size(640, 25);
       this.txtPesquisa.TabIndex = 3;
+      this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
       this.txtPesquisa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPesquisa_KeyDown_1);
+      this.txtPesquisa.Validating += new System.ComponentModel.CancelEventHandler(this.txtPesquisa_Validating);
       // 
       // btnTipoBusca
       // 
@@ -140,6 +140,7 @@
       this.btnTipoBusca.TabIndex = 4;
       this.btnTipoBusca.Text = "Contenha";
       this.btnTipoBusca.UseVisualStyleBackColor = false;
+      this.btnTipoBusca.Click += new System.EventHandler(this.btnTipoBusca_Click);
       // 
       // chkPesquisaDigito
       // 
@@ -270,6 +271,7 @@
       this.cboPesquisa.PrtValorPadrao = null;
       this.cboPesquisa.Size = new System.Drawing.Size(189, 22);
       this.cboPesquisa.TabIndex = 7;
+      this.cboPesquisa.SelectedValueChanged += new System.EventHandler(this.cboPesquisa_SelectedValueChanged);
       // 
       // dgvGrid
       // 
@@ -300,6 +302,10 @@
       this.dgvGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
       this.dgvGrid.Size = new System.Drawing.Size(639, 284);
       this.dgvGrid.TabIndex = 11;
+      this.dgvGrid.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvGrid_ColumnWidthChanged);
+      this.dgvGrid.DoubleClick += new System.EventHandler(this.dgvGrid_DoubleClick);
+      this.dgvGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvGrid_KeyDown);
+      this.dgvGrid.Leave += new System.EventHandler(this.dgvGrid_Leave);
       // 
       // ssrConsulta
       // 
@@ -332,6 +338,8 @@
       this.Name = "frmBaseConsulta";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "frmBaseConsulta";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBaseConsulta_FormClosing);
+      this.Shown += new System.EventHandler(this.frmBaseConsulta_Shown);
       this.pnlTopo.ResumeLayout(false);
       this.pnlTopo.PerformLayout();
       this.pnlBase.ResumeLayout(false);

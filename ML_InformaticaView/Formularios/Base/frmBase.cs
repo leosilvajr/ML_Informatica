@@ -366,7 +366,7 @@ namespace Funcionarios.Formularios
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           Close();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)

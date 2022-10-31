@@ -376,11 +376,11 @@ namespace ML_InformaticaView.Formularios.Base
     }
 
 
-    private void pnlSuperior_MouseMove(object sender, MouseEventArgs e)
-    {
-      //linha necessária para identicar quando campo pesquisa pode perder o foco
-      manterFoco = false;
-    }
+    //private void pnlSuperior_MouseMove(object sender, MouseEventArgs e)
+    //{
+    //  //linha necessária para identicar quando campo pesquisa pode perder o foco
+    //  manterFoco = false;
+    //}
 
     private void txtPesquisa_TextChanged(object sender, EventArgs e)
     {

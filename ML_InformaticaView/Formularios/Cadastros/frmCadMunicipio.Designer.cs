@@ -100,7 +100,7 @@
       // 
       // lblStatus
       // 
-      this.lblStatus.Location = new System.Drawing.Point(320, 5);
+      this.lblStatus.Location = new System.Drawing.Point(254, 5);
       // 
       // pnlTopo
       // 
@@ -188,6 +188,8 @@
       this.txtCodMunicipio.PrtValorPadrao = null;
       this.txtCodMunicipio.Size = new System.Drawing.Size(61, 18);
       this.txtCodMunicipio.TabIndex = 7;
+      this.txtCodMunicipio.TextChanged += new System.EventHandler(this.txtCodMunicipio_TextChanged);
+      this.txtCodMunicipio.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodMunicipio_Validating);
       // 
       // txtNomeMunicipio
       // 

@@ -49,21 +49,6 @@ namespace ML_InformaticaView.Formularios.Cadastros
     }
 
 
-
-    /*    public override void MontaTela()
-        {
-          base.MontaTela(municipio);
-          if (municipio != null)
-          {
-            //preencher campos de tela, ver se vai chamar monta tela passando a entidade
-            txtCodMunicipio.Text = municipio.CodigoMunicipio.ToString();
-            txtNomeMunicipio.Text = municipio.Nome;
-            cboEstado.Text = municipio.NomeUF;
-
-          }
-        }
-      */
-
     /// função recebe o retorno da consulta de produto, utilizando delegate
     private void RetornoConsultaCallbackFn(MunicipioEntidade entidade)
     {
@@ -157,11 +142,6 @@ namespace ML_InformaticaView.Formularios.Cadastros
     public override bool Func_AcaoCancelar()
     {
       return base.Func_AcaoCancelar();
-    }
-
-    public override bool Func_AcaoSair()
-    {
-      return base.Func_AcaoSair();
     }
 
     private void txtCodMunicipio_Validating(object sender, CancelEventArgs e)
