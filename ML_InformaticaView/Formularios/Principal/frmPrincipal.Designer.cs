@@ -441,6 +441,7 @@
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(137, 22);
             this.toolStripMenuItem6.Text = "Calculadora";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // frmPrincipal
             // 

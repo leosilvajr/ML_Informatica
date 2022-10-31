@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -75,6 +76,10 @@ namespace ML_InformaticaView.Formularios.Principal
         private void btnInicio_Click(object sender, EventArgs e)
         {
             AlterarCorBotao(pnlMenu.Controls);
+            menuStripCadastros.Visible = false;
+            menuStripRelatorios.Visible = false;
+            menuStripConfiguracoes.Visible = false;
+            menuStripUltilitarios.Visible = false;
         }
 
         private void btnCadastros_Click(object sender, EventArgs e)
@@ -116,6 +121,11 @@ namespace ML_InformaticaView.Formularios.Principal
         {
             AlterarCorBotao(pnlMenu.Controls);
             Application.Exit();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Process.Start("Calc.exe");
         }
     }
 }

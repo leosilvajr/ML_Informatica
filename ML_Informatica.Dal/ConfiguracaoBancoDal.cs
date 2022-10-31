@@ -63,7 +63,6 @@ namespace ML_Informatica.Dal
             }
             catch
             {
-
                 throw; //return false;
             }
 
