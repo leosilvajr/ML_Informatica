@@ -390,6 +390,41 @@ namespace ML_InformaticaView.Funcoes
             return valido;
 
         }
+    public static void PreencheComboEstadosBrasil(this ComboBoxEdit obj)
+    {
+      IList<ItensComboBoxEntidade> lista = new List<ItensComboBoxEntidade>
+              {
+                new ItensComboBoxEntidade {Value = 11, Descricao = "RO"},
+                new ItensComboBoxEntidade {Value = 12, Descricao = "AC"},
+                new ItensComboBoxEntidade {Value = 13, Descricao = "AM"},
+                new ItensComboBoxEntidade {Value = 14, Descricao = "RR"},
+                new ItensComboBoxEntidade {Value = 15, Descricao = "PA"},
+                new ItensComboBoxEntidade {Value = 16, Descricao = "AP"},
+                new ItensComboBoxEntidade {Value = 17, Descricao = "TO"},
+                new ItensComboBoxEntidade {Value = 21, Descricao = "MA"},
+                new ItensComboBoxEntidade {Value = 22, Descricao = "PI"},
+                new ItensComboBoxEntidade {Value = 23, Descricao = "CE"},
+                new ItensComboBoxEntidade {Value = 24, Descricao = "RN"},
+                new ItensComboBoxEntidade {Value = 25, Descricao = "PB"},
+                new ItensComboBoxEntidade {Value = 26, Descricao = "PE"},
+                new ItensComboBoxEntidade {Value = 27, Descricao = "AL"},
+                new ItensComboBoxEntidade {Value = 28, Descricao = "SE"},
+                new ItensComboBoxEntidade {Value = 29, Descricao = "BA"},
+                new ItensComboBoxEntidade {Value = 31, Descricao = "MG"},
+                new ItensComboBoxEntidade {Value = 32, Descricao = "ES"},
+                new ItensComboBoxEntidade {Value = 33, Descricao = "RJ"},
+                new ItensComboBoxEntidade {Value = 35, Descricao = "SP"},
+                new ItensComboBoxEntidade {Value = 41, Descricao = "PR"},
+                new ItensComboBoxEntidade {Value = 42, Descricao = "SC"},
+                new ItensComboBoxEntidade {Value = 43, Descricao = "RS"},
+                new ItensComboBoxEntidade {Value = 50, Descricao = "MS"},
+                new ItensComboBoxEntidade {Value = 51, Descricao = "MT"},
+                new ItensComboBoxEntidade {Value = 52, Descricao = "GO"},
+                new ItensComboBoxEntidade {Value = 53, Descricao = "DF"},
+              };
 
+      obj.DataSource = lista;
     }
+
+  }
 }

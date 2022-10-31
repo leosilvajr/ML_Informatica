@@ -70,7 +70,7 @@ namespace ML_Informatica.Dal
         using (var conexao = FirebirdDal.GetInstancia.GetConexao())
         {
           string campos = SelectFields(fullSearch);
-          string query = "select " + campos + " from VIEW_MUNICIPIO ";
+          string query = "select " + campos + " from VW_MUNICIPIO ";
           if (codigo_municipio != null)
             query += UtilDal.WhereOrAnd(query) + " codigo_municipio = ? ";
           if (nome != null)
