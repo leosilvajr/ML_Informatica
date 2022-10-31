@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientesDal.cs" />
     <Compile Include="ConfiguracaoBancoDal.cs" />
     <Compile Include="FirebirdDal.cs" />
     <Compile Include="MunicipioDal.cs" />

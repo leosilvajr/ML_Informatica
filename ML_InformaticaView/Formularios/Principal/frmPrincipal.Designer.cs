@@ -382,13 +382,14 @@
       // toolStripMenuItem2
       // 
       this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-      this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+      this.toolStripMenuItem2.Size = new System.Drawing.Size(133, 22);
       this.toolStripMenuItem2.Text = "Clientes";
+      this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
       // 
       // municípiosToolStripMenuItem
       // 
       this.municípiosToolStripMenuItem.Name = "municípiosToolStripMenuItem";
-      this.municípiosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.municípiosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
       this.municípiosToolStripMenuItem.Text = "Municípios";
       this.municípiosToolStripMenuItem.Click += new System.EventHandler(this.municípiosToolStripMenuItem_Click);
       // 

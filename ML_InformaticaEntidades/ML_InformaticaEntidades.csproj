@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientesEntidade.cs" />
     <Compile Include="ConfiguracaoBancoEntidade.cs" />
     <Compile Include="EnumsEntidade.cs" />
     <Compile Include="ItensComboBoxEntidade.cs" />

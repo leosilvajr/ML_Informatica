@@ -137,7 +137,7 @@
       this.btnExit.BackColor = System.Drawing.Color.Transparent;
       this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
       this.btnExit.FlatAppearance.BorderSize = 0;
-      this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+      this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
       this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnExit.ForeColor = System.Drawing.Color.Black;
       this.btnExit.Image = global::ML_InformaticaView.Properties.Resources.logout1;
@@ -162,7 +162,7 @@
       this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
       this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Left;
       this.btnCancelar.FlatAppearance.BorderSize = 0;
-      this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+      this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
       this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnCancelar.ForeColor = System.Drawing.Color.Black;
       this.btnCancelar.Image = global::ML_InformaticaView.Properties.Resources.close;
@@ -187,7 +187,7 @@
       this.btnGravar.BackColor = System.Drawing.Color.Transparent;
       this.btnGravar.Dock = System.Windows.Forms.DockStyle.Left;
       this.btnGravar.FlatAppearance.BorderSize = 0;
-      this.btnGravar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+      this.btnGravar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
       this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnGravar.ForeColor = System.Drawing.Color.Black;
       this.btnGravar.Image = global::ML_InformaticaView.Properties.Resources.file;
@@ -212,7 +212,7 @@
       this.btnProcurar.BackColor = System.Drawing.Color.Transparent;
       this.btnProcurar.Dock = System.Windows.Forms.DockStyle.Left;
       this.btnProcurar.FlatAppearance.BorderSize = 0;
-      this.btnProcurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+      this.btnProcurar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
       this.btnProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnProcurar.ForeColor = System.Drawing.Color.Black;
       this.btnProcurar.Image = global::ML_InformaticaView.Properties.Resources.search;
@@ -237,7 +237,7 @@
       this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
       this.btnExcluir.Dock = System.Windows.Forms.DockStyle.Left;
       this.btnExcluir.FlatAppearance.BorderSize = 0;
-      this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+      this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
       this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnExcluir.ForeColor = System.Drawing.Color.Black;
       this.btnExcluir.Image = global::ML_InformaticaView.Properties.Resources.delete;
@@ -262,7 +262,7 @@
       this.btnIncluir.BackColor = System.Drawing.Color.Transparent;
       this.btnIncluir.Dock = System.Windows.Forms.DockStyle.Left;
       this.btnIncluir.FlatAppearance.BorderSize = 0;
-      this.btnIncluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+      this.btnIncluir.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
       this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnIncluir.ForeColor = System.Drawing.Color.Black;
       this.btnIncluir.Image = global::ML_InformaticaView.Properties.Resources.add1;

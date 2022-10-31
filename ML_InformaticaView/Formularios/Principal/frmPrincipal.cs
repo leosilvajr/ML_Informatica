@@ -134,5 +134,11 @@ namespace ML_InformaticaView.Formularios.Principal
       frmCadMunicipio cadMunicipio = new frmCadMunicipio();
       Util.AbreForm(pnlBase, cadMunicipio);
     }
+
+    private void toolStripMenuItem2_Click(object sender, EventArgs e)
+    {
+      frmCadClientes cadClientes = new frmCadClientes();
+      Util.AbreForm(pnlBase, cadClientes);
+    }
   }
 }
