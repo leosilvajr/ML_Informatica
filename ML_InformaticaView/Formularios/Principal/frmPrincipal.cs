@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,7 +25,63 @@ namespace ML_InformaticaView.Formularios.Principal
       InitializeComponent();
       lblTituloForm.Visible = false;
     }
-    [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+    private int borderWidth = 5; //Exemplo apenas para teste
+    private new Padding Padding = new Padding(50); //Exemplo apenas para teste (Pode ser especificado direto nas propriedades do Form)
+
+    private WinApi.HitTest HitTestNCA(IntPtr lparam)
+    {
+      Point vPoint = new Point((Int16)lparam, (Int16)((int)lparam >> 16));
+      int vPadding = Math.Max(Padding.Right, Padding.Bottom);
+
+      if (RectangleToScreen(new Rectangle(ClientRectangle.Width - vPadding, ClientRectangle.Height - vPadding, vPadding, vPadding)).Contains(vPoint))
+        return WinApi.HitTest.HTBOTTOMRIGHT;
+
+      if (RectangleToScreen(new Rectangle(borderWidth, borderWidth, ClientRectangle.Width - 2 * borderWidth, 50)).Contains(vPoint))
+        return WinApi.HitTest.HTCAPTION;
+
+      return WinApi.HitTest.HTCLIENT;
+    }
+
+    protected override void WndProc(ref Message m)
+    {
+      if (DesignMode)
+      {
+        base.WndProc(ref m);
+        return;
+      }
+
+      switch (m.Msg)
+      {
+        case (int)WinApi.Messages.WM_NCHITTEST:
+          WinApi.HitTest ht = HitTestNCA(m.LParam);
+          if (ht != WinApi.HitTest.HTCLIENT)
+          {
+            m.Result = (IntPtr)ht;
+            return;
+          }
+          break;
+      }
+
+      base.WndProc(ref m);
+    }
+
+    [SuppressUnmanagedCodeSecurity]
+    internal static class WinApi
+    {
+      public enum Messages : uint
+      {
+        WM_NCHITTEST = 0x84,
+      }
+
+      public enum HitTest
+      {
+        HTCLIENT = 1,
+        HTBOTTOMRIGHT = 17,
+        HTCAPTION = 2
+      }
+    }
+
+      [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
     private extern static void ReleaseCapture();
     [DllImport("user32.DLL", EntryPoint = "SendMessage")]
     private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);

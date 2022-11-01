@@ -461,6 +461,7 @@
       this.Controls.Add(this.pnlRodape);
       this.Controls.Add(this.pnlBarraDireita);
       this.Controls.Add(this.pnlMenu);
+      this.MinimumSize = new System.Drawing.Size(1200, 600);
       this.Name = "frmPrincipal";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "frmPrincipal";

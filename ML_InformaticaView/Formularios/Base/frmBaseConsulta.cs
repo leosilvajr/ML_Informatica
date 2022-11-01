@@ -476,5 +476,38 @@ namespace ML_InformaticaView.Formularios.Base
         Mensagem.MostraErro(ex.Message);
       }
     }
-  }
+
+        private void frmBaseConsulta_KeyDown(object sender, KeyEventArgs e)
+        {
+      bool _shift = e.Shift;
+      //ENTER  -move para o proximo controle
+      //SHIFT + ENTER - move para controle anterior
+      if (this.ActiveControl is DataGridViewEdit dgv)
+        return;
+      if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab || e.KeyCode == Keys.Down || e.KeyCode == Keys.Up)
+      {
+        //vou cair fora se os controles estiverem definidos para não fazer nada no enter
+        if (this.ActiveControl is MaskedTextBoxEdit mtb)
+        {
+          if (mtb.PrtTabEnter == false) return;
+        }
+        else if (this.ActiveControl is TextBoxEdit txt)
+        {
+          if (txt.PrtTabEnter == false) return;
+        }
+        else if (this.ActiveControl is ComboBoxEdit cbo)
+        {
+          //faço isso para navegar na lista do combobox, em vez de mudar de controle
+          if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            return;
+
+        }
+        if (e.KeyCode == Keys.Up)
+          _shift = true;
+        SetFocusProximoControle(e, _shift);
+      }
+      else if (e.KeyCode == Keys.Escape)
+        this.Close();
+    }
+    }
 }

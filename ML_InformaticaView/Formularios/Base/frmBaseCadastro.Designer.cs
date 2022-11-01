@@ -290,6 +290,7 @@
       this.ClientSize = new System.Drawing.Size(675, 450);
       this.Name = "frmBaseCadastro";
       this.Text = "frmBaseCadastro";
+      this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBaseCadastro_KeyDown);
       this.pnlTopo.ResumeLayout(false);
       this.pnlTopo.PerformLayout();
       this.pnlBase.ResumeLayout(false);

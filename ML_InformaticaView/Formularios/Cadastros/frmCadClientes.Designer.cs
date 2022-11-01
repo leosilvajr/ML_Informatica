@@ -33,12 +33,12 @@
       this.lblNomeMunicipio = new Controles.LabelEdit();
       this.labelEdit13 = new Controles.LabelEdit();
       this.txtCodigoMunicipio = new Controles.TextBoxEdit();
-      this.txtRazao_Social = new Controles.TextBoxEdit();
+      this.txtNome = new Controles.TextBoxEdit();
       this.labelEdit1 = new Controles.LabelEdit();
-      this.txtCodigoFilial = new Controles.TextBoxEdit();
+      this.txtCodigoCliente = new Controles.TextBoxEdit();
       this.labelEdit2 = new Controles.LabelEdit();
       this.labelEdit3 = new Controles.LabelEdit();
-      this.textBoxEdit1 = new Controles.TextBoxEdit();
+      this.txtApelido = new Controles.TextBoxEdit();
       this.mkbCep = new Controles.MaskedTextBoxEdit();
       this.labelEdit12 = new Controles.LabelEdit();
       this.labelEdit10 = new Controles.LabelEdit();
@@ -50,7 +50,7 @@
       this.txtComplemento = new Controles.TextBoxEdit();
       this.labelEdit11 = new Controles.LabelEdit();
       this.labelEdit18 = new Controles.LabelEdit();
-      this.mkbCelular1 = new Controles.MaskedTextBoxEdit();
+      this.mkbCelular = new Controles.MaskedTextBoxEdit();
       this.labelEdit17 = new Controles.LabelEdit();
       this.mkbTelefone = new Controles.MaskedTextBoxEdit();
       this.labelEdit15 = new Controles.LabelEdit();
@@ -65,7 +65,7 @@
       // pnlBaseCadastro
       // 
       this.pnlBaseCadastro.Controls.Add(this.labelEdit18);
-      this.pnlBaseCadastro.Controls.Add(this.mkbCelular1);
+      this.pnlBaseCadastro.Controls.Add(this.mkbCelular);
       this.pnlBaseCadastro.Controls.Add(this.labelEdit17);
       this.pnlBaseCadastro.Controls.Add(this.mkbTelefone);
       this.pnlBaseCadastro.Controls.Add(this.labelEdit15);
@@ -81,17 +81,18 @@
       this.pnlBaseCadastro.Controls.Add(this.labelEdit8);
       this.pnlBaseCadastro.Controls.Add(this.txtEndereco);
       this.pnlBaseCadastro.Controls.Add(this.labelEdit3);
-      this.pnlBaseCadastro.Controls.Add(this.textBoxEdit1);
+      this.pnlBaseCadastro.Controls.Add(this.txtApelido);
       this.pnlBaseCadastro.Controls.Add(this.labelEdit2);
-      this.pnlBaseCadastro.Controls.Add(this.txtRazao_Social);
+      this.pnlBaseCadastro.Controls.Add(this.txtNome);
       this.pnlBaseCadastro.Controls.Add(this.labelEdit1);
-      this.pnlBaseCadastro.Controls.Add(this.txtCodigoFilial);
+      this.pnlBaseCadastro.Controls.Add(this.txtCodigoCliente);
       this.pnlBaseCadastro.Controls.Add(this.labelEdit16);
       this.pnlBaseCadastro.Controls.Add(this.lblUf);
       this.pnlBaseCadastro.Controls.Add(this.lblNomeMunicipio);
       this.pnlBaseCadastro.Controls.Add(this.labelEdit13);
       this.pnlBaseCadastro.Controls.Add(this.txtCodigoMunicipio);
       this.pnlBaseCadastro.Size = new System.Drawing.Size(638, 336);
+      this.pnlBaseCadastro.TabIndex = 2;
       this.pnlBaseCadastro.Controls.SetChildIndex(this.pnlBotoesTopo, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.pnlStatus, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.txtCodigoMunicipio, 0);
@@ -99,11 +100,11 @@
       this.pnlBaseCadastro.Controls.SetChildIndex(this.lblNomeMunicipio, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.lblUf, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit16, 0);
-      this.pnlBaseCadastro.Controls.SetChildIndex(this.txtCodigoFilial, 0);
+      this.pnlBaseCadastro.Controls.SetChildIndex(this.txtCodigoCliente, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit1, 0);
-      this.pnlBaseCadastro.Controls.SetChildIndex(this.txtRazao_Social, 0);
+      this.pnlBaseCadastro.Controls.SetChildIndex(this.txtNome, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit2, 0);
-      this.pnlBaseCadastro.Controls.SetChildIndex(this.textBoxEdit1, 0);
+      this.pnlBaseCadastro.Controls.SetChildIndex(this.txtApelido, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit3, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.txtEndereco, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit8, 0);
@@ -119,7 +120,7 @@
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit15, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.mkbTelefone, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit17, 0);
-      this.pnlBaseCadastro.Controls.SetChildIndex(this.mkbCelular1, 0);
+      this.pnlBaseCadastro.Controls.SetChildIndex(this.mkbCelular, 0);
       this.pnlBaseCadastro.Controls.SetChildIndex(this.labelEdit18, 0);
       // 
       // pnlBotoesTopo
@@ -280,40 +281,43 @@
       this.txtCodigoMunicipio.PrtToolTipMensagem = null;
       this.txtCodigoMunicipio.PrtValorPadrao = null;
       this.txtCodigoMunicipio.Size = new System.Drawing.Size(55, 18);
-      this.txtCodigoMunicipio.TabIndex = 39;
+      this.txtCodigoMunicipio.TabIndex = 11;
+      this.txtCodigoMunicipio.TextChanged += new System.EventHandler(this.txtCodigoMunicipio_TextChanged);
+      this.txtCodigoMunicipio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoMunicipio_KeyDown);
+      this.txtCodigoMunicipio.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigoMunicipio_Validating);
       // 
-      // txtRazao_Social
+      // txtNome
       // 
-      this.txtRazao_Social.BackColor = System.Drawing.SystemColors.Menu;
-      this.txtRazao_Social.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-      this.txtRazao_Social.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtRazao_Social.ForeColor = System.Drawing.Color.Black;
-      this.txtRazao_Social.Location = new System.Drawing.Point(102, 128);
-      this.txtRazao_Social.MaxLength = 100;
-      this.txtRazao_Social.Name = "txtRazao_Social";
-      this.txtRazao_Social.PrtAceitaEspaco = false;
-      this.txtRazao_Social.PrtAceitaNumeros = false;
-      this.txtRazao_Social.PrtAtivaPesquisa = false;
-      this.txtRazao_Social.PrtAtivaValidacao = true;
-      this.txtRazao_Social.PrtCampoObrigatorio = false;
-      this.txtRazao_Social.PrtCaracteresEspeciais = null;
-      this.txtRazao_Social.PrtDesabilitarControle = false;
-      this.txtRazao_Social.PrtGravaParametroTela = false;
-      this.txtRazao_Social.PrtIniciaFocusControle = false;
-      this.txtRazao_Social.PrtLabelDescricao = null;
-      this.txtRazao_Social.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
-      this.txtRazao_Social.PrtMontaTelaAutomatico = true;
-      this.txtRazao_Social.PrtNaoLimparControle = false;
-      this.txtRazao_Social.PrtNomeCampoBD = "RazaoSocial";
-      this.txtRazao_Social.PrtNomeTabelaBD = null;
-      this.txtRazao_Social.PrtOcultarAlertaErro = false;
-      this.txtRazao_Social.PrtTabEnter = true;
-      this.txtRazao_Social.PrtTamanhoMaximo = 100;
-      this.txtRazao_Social.PrtTipoTexto = Controles.Enums.TipoTexto.TEXTO_MAIUSCULO;
-      this.txtRazao_Social.PrtToolTipMensagem = null;
-      this.txtRazao_Social.PrtValorPadrao = null;
-      this.txtRazao_Social.Size = new System.Drawing.Size(508, 18);
-      this.txtRazao_Social.TabIndex = 44;
+      this.txtNome.BackColor = System.Drawing.SystemColors.Menu;
+      this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+      this.txtNome.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtNome.ForeColor = System.Drawing.Color.Black;
+      this.txtNome.Location = new System.Drawing.Point(102, 128);
+      this.txtNome.MaxLength = 100;
+      this.txtNome.Name = "txtNome";
+      this.txtNome.PrtAceitaEspaco = false;
+      this.txtNome.PrtAceitaNumeros = false;
+      this.txtNome.PrtAtivaPesquisa = false;
+      this.txtNome.PrtAtivaValidacao = true;
+      this.txtNome.PrtCampoObrigatorio = false;
+      this.txtNome.PrtCaracteresEspeciais = null;
+      this.txtNome.PrtDesabilitarControle = false;
+      this.txtNome.PrtGravaParametroTela = false;
+      this.txtNome.PrtIniciaFocusControle = false;
+      this.txtNome.PrtLabelDescricao = null;
+      this.txtNome.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
+      this.txtNome.PrtMontaTelaAutomatico = true;
+      this.txtNome.PrtNaoLimparControle = false;
+      this.txtNome.PrtNomeCampoBD = "Nome";
+      this.txtNome.PrtNomeTabelaBD = null;
+      this.txtNome.PrtOcultarAlertaErro = false;
+      this.txtNome.PrtTabEnter = true;
+      this.txtNome.PrtTamanhoMaximo = 100;
+      this.txtNome.PrtTipoTexto = Controles.Enums.TipoTexto.TEXTO_MAIUSCULO;
+      this.txtNome.PrtToolTipMensagem = null;
+      this.txtNome.PrtValorPadrao = null;
+      this.txtNome.Size = new System.Drawing.Size(508, 18);
+      this.txtNome.TabIndex = 4;
       // 
       // labelEdit1
       // 
@@ -332,38 +336,42 @@
       this.labelEdit1.Text = "Cód Cliente:";
       this.labelEdit1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
-      // txtCodigoFilial
+      // txtCodigoCliente
       // 
-      this.txtCodigoFilial.BackColor = System.Drawing.Color.White;
-      this.txtCodigoFilial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-      this.txtCodigoFilial.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.txtCodigoFilial.ForeColor = System.Drawing.Color.Black;
-      this.txtCodigoFilial.Location = new System.Drawing.Point(102, 104);
-      this.txtCodigoFilial.MaxLength = 9;
-      this.txtCodigoFilial.Name = "txtCodigoFilial";
-      this.txtCodigoFilial.PrtAceitaEspaco = false;
-      this.txtCodigoFilial.PrtAceitaNumeros = false;
-      this.txtCodigoFilial.PrtAtivaPesquisa = false;
-      this.txtCodigoFilial.PrtAtivaValidacao = true;
-      this.txtCodigoFilial.PrtCampoObrigatorio = false;
-      this.txtCodigoFilial.PrtCaracteresEspeciais = null;
-      this.txtCodigoFilial.PrtDesabilitarControle = false;
-      this.txtCodigoFilial.PrtGravaParametroTela = false;
-      this.txtCodigoFilial.PrtIniciaFocusControle = false;
-      this.txtCodigoFilial.PrtLabelDescricao = null;
-      this.txtCodigoFilial.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
-      this.txtCodigoFilial.PrtMontaTelaAutomatico = true;
-      this.txtCodigoFilial.PrtNaoLimparControle = false;
-      this.txtCodigoFilial.PrtNomeCampoBD = "CodigoFilial";
-      this.txtCodigoFilial.PrtNomeTabelaBD = null;
-      this.txtCodigoFilial.PrtOcultarAlertaErro = false;
-      this.txtCodigoFilial.PrtTabEnter = true;
-      this.txtCodigoFilial.PrtTamanhoMaximo = 9;
-      this.txtCodigoFilial.PrtTipoTexto = Controles.Enums.TipoTexto.TEXTO_MAIUSCULO;
-      this.txtCodigoFilial.PrtToolTipMensagem = null;
-      this.txtCodigoFilial.PrtValorPadrao = null;
-      this.txtCodigoFilial.Size = new System.Drawing.Size(64, 18);
-      this.txtCodigoFilial.TabIndex = 43;
+      this.txtCodigoCliente.BackColor = System.Drawing.Color.White;
+      this.txtCodigoCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+      this.txtCodigoCliente.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtCodigoCliente.ForeColor = System.Drawing.Color.Black;
+      this.txtCodigoCliente.Location = new System.Drawing.Point(102, 104);
+      this.txtCodigoCliente.MaxLength = 9;
+      this.txtCodigoCliente.Name = "txtCodigoCliente";
+      this.txtCodigoCliente.PrtAceitaEspaco = false;
+      this.txtCodigoCliente.PrtAceitaNumeros = true;
+      this.txtCodigoCliente.PrtAtivaPesquisa = false;
+      this.txtCodigoCliente.PrtAtivaValidacao = true;
+      this.txtCodigoCliente.PrtCampoObrigatorio = false;
+      this.txtCodigoCliente.PrtCaracteresEspeciais = null;
+      this.txtCodigoCliente.PrtDesabilitarControle = false;
+      this.txtCodigoCliente.PrtGravaParametroTela = false;
+      this.txtCodigoCliente.PrtIniciaFocusControle = false;
+      this.txtCodigoCliente.PrtLabelDescricao = null;
+      this.txtCodigoCliente.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
+      this.txtCodigoCliente.PrtMontaTelaAutomatico = true;
+      this.txtCodigoCliente.PrtNaoLimparControle = false;
+      this.txtCodigoCliente.PrtNomeCampoBD = "CodigoCliente";
+      this.txtCodigoCliente.PrtNomeTabelaBD = null;
+      this.txtCodigoCliente.PrtOcultarAlertaErro = false;
+      this.txtCodigoCliente.PrtTabEnter = true;
+      this.txtCodigoCliente.PrtTamanhoMaximo = 9;
+      this.txtCodigoCliente.PrtTipoTexto = Controles.Enums.TipoTexto.TEXTO_MAIUSCULO;
+      this.txtCodigoCliente.PrtToolTipMensagem = null;
+      this.txtCodigoCliente.PrtValorPadrao = null;
+      this.txtCodigoCliente.Size = new System.Drawing.Size(64, 18);
+      this.txtCodigoCliente.TabIndex = 3;
+      this.txtCodigoCliente.TextChanged += new System.EventHandler(this.txtCodigoCliente_TextChanged);
+      this.txtCodigoCliente.Enter += new System.EventHandler(this.txtCodigoCliente_Enter);
+      this.txtCodigoCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoCliente_KeyDown);
+      this.txtCodigoCliente.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigoCliente_Validating);
       // 
       // labelEdit2
       // 
@@ -399,38 +407,38 @@
       this.labelEdit3.Text = "Apelido:";
       this.labelEdit3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
-      // textBoxEdit1
+      // txtApelido
       // 
-      this.textBoxEdit1.BackColor = System.Drawing.SystemColors.Menu;
-      this.textBoxEdit1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-      this.textBoxEdit1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBoxEdit1.ForeColor = System.Drawing.Color.Black;
-      this.textBoxEdit1.Location = new System.Drawing.Point(102, 152);
-      this.textBoxEdit1.MaxLength = 100;
-      this.textBoxEdit1.Name = "textBoxEdit1";
-      this.textBoxEdit1.PrtAceitaEspaco = false;
-      this.textBoxEdit1.PrtAceitaNumeros = false;
-      this.textBoxEdit1.PrtAtivaPesquisa = false;
-      this.textBoxEdit1.PrtAtivaValidacao = true;
-      this.textBoxEdit1.PrtCampoObrigatorio = false;
-      this.textBoxEdit1.PrtCaracteresEspeciais = null;
-      this.textBoxEdit1.PrtDesabilitarControle = false;
-      this.textBoxEdit1.PrtGravaParametroTela = false;
-      this.textBoxEdit1.PrtIniciaFocusControle = false;
-      this.textBoxEdit1.PrtLabelDescricao = null;
-      this.textBoxEdit1.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
-      this.textBoxEdit1.PrtMontaTelaAutomatico = true;
-      this.textBoxEdit1.PrtNaoLimparControle = false;
-      this.textBoxEdit1.PrtNomeCampoBD = "RazaoSocial";
-      this.textBoxEdit1.PrtNomeTabelaBD = null;
-      this.textBoxEdit1.PrtOcultarAlertaErro = false;
-      this.textBoxEdit1.PrtTabEnter = true;
-      this.textBoxEdit1.PrtTamanhoMaximo = 100;
-      this.textBoxEdit1.PrtTipoTexto = Controles.Enums.TipoTexto.TEXTO_MAIUSCULO;
-      this.textBoxEdit1.PrtToolTipMensagem = null;
-      this.textBoxEdit1.PrtValorPadrao = null;
-      this.textBoxEdit1.Size = new System.Drawing.Size(509, 18);
-      this.textBoxEdit1.TabIndex = 47;
+      this.txtApelido.BackColor = System.Drawing.SystemColors.Menu;
+      this.txtApelido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+      this.txtApelido.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtApelido.ForeColor = System.Drawing.Color.Black;
+      this.txtApelido.Location = new System.Drawing.Point(102, 152);
+      this.txtApelido.MaxLength = 100;
+      this.txtApelido.Name = "txtApelido";
+      this.txtApelido.PrtAceitaEspaco = false;
+      this.txtApelido.PrtAceitaNumeros = false;
+      this.txtApelido.PrtAtivaPesquisa = false;
+      this.txtApelido.PrtAtivaValidacao = true;
+      this.txtApelido.PrtCampoObrigatorio = false;
+      this.txtApelido.PrtCaracteresEspeciais = null;
+      this.txtApelido.PrtDesabilitarControle = false;
+      this.txtApelido.PrtGravaParametroTela = false;
+      this.txtApelido.PrtIniciaFocusControle = false;
+      this.txtApelido.PrtLabelDescricao = null;
+      this.txtApelido.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
+      this.txtApelido.PrtMontaTelaAutomatico = true;
+      this.txtApelido.PrtNaoLimparControle = false;
+      this.txtApelido.PrtNomeCampoBD = "Apelido";
+      this.txtApelido.PrtNomeTabelaBD = "";
+      this.txtApelido.PrtOcultarAlertaErro = false;
+      this.txtApelido.PrtTabEnter = true;
+      this.txtApelido.PrtTamanhoMaximo = 100;
+      this.txtApelido.PrtTipoTexto = Controles.Enums.TipoTexto.TEXTO_MAIUSCULO;
+      this.txtApelido.PrtToolTipMensagem = null;
+      this.txtApelido.PrtValorPadrao = null;
+      this.txtApelido.Size = new System.Drawing.Size(509, 18);
+      this.txtApelido.TabIndex = 5;
       // 
       // mkbCep
       // 
@@ -468,7 +476,7 @@
             0});
       this.mkbCep.PrtValorPadrao = null;
       this.mkbCep.Size = new System.Drawing.Size(69, 18);
-      this.mkbCep.TabIndex = 52;
+      this.mkbCep.TabIndex = 9;
       // 
       // labelEdit12
       // 
@@ -535,7 +543,7 @@
       this.txtBairro.PrtToolTipMensagem = null;
       this.txtBairro.PrtValorPadrao = null;
       this.txtBairro.Size = new System.Drawing.Size(382, 18);
-      this.txtBairro.TabIndex = 51;
+      this.txtBairro.TabIndex = 8;
       // 
       // labelEdit9
       // 
@@ -560,7 +568,7 @@
       this.txtNumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtNumero.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtNumero.ForeColor = System.Drawing.Color.Black;
-      this.txtNumero.Location = new System.Drawing.Point(545, 176);
+      this.txtNumero.Location = new System.Drawing.Point(542, 176);
       this.txtNumero.MaxLength = 10;
       this.txtNumero.Name = "txtNumero";
       this.txtNumero.PrtAceitaEspaco = false;
@@ -584,8 +592,8 @@
       this.txtNumero.PrtTipoTexto = Controles.Enums.TipoTexto.TEXTO_MAIUSCULO;
       this.txtNumero.PrtToolTipMensagem = null;
       this.txtNumero.PrtValorPadrao = null;
-      this.txtNumero.Size = new System.Drawing.Size(66, 18);
-      this.txtNumero.TabIndex = 50;
+      this.txtNumero.Size = new System.Drawing.Size(69, 18);
+      this.txtNumero.TabIndex = 7;
       // 
       // labelEdit8
       // 
@@ -635,7 +643,7 @@
       this.txtEndereco.PrtToolTipMensagem = null;
       this.txtEndereco.PrtValorPadrao = null;
       this.txtEndereco.Size = new System.Drawing.Size(382, 18);
-      this.txtEndereco.TabIndex = 49;
+      this.txtEndereco.TabIndex = 6;
       // 
       // txtComplemento
       // 
@@ -668,7 +676,7 @@
       this.txtComplemento.PrtToolTipMensagem = null;
       this.txtComplemento.PrtValorPadrao = null;
       this.txtComplemento.Size = new System.Drawing.Size(509, 18);
-      this.txtComplemento.TabIndex = 57;
+      this.txtComplemento.TabIndex = 10;
       // 
       // labelEdit11
       // 
@@ -704,43 +712,43 @@
       this.labelEdit18.Text = "Celular:";
       this.labelEdit18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
-      // mkbCelular1
+      // mkbCelular
       // 
-      this.mkbCelular1.BackColor = System.Drawing.SystemColors.Menu;
-      this.mkbCelular1.Font = new System.Drawing.Font("Arial", 8F);
-      this.mkbCelular1.ForeColor = System.Drawing.Color.Black;
-      this.mkbCelular1.Location = new System.Drawing.Point(314, 297);
-      this.mkbCelular1.Name = "mkbCelular1";
-      this.mkbCelular1.PromptChar = ' ';
-      this.mkbCelular1.PrtAceitaValorNegativo = false;
-      this.mkbCelular1.PrtAtivaPesquisa = false;
-      this.mkbCelular1.PrtAtivarUpperCase = false;
-      this.mkbCelular1.PrtAtivaValidacao = true;
-      this.mkbCelular1.PrtCampoObrigatorio = false;
-      this.mkbCelular1.PrtDesabilitarControle = false;
-      this.mkbCelular1.PrtGravaParametroTela = false;
-      this.mkbCelular1.PrtIniciaFocusControle = false;
-      this.mkbCelular1.PrtLabelDescricao = null;
-      this.mkbCelular1.PrtManterAlinhamentoLeft = false;
-      this.mkbCelular1.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
-      this.mkbCelular1.PrtMontaTelaAutomatico = true;
-      this.mkbCelular1.PrtNaoLimparControle = false;
-      this.mkbCelular1.PrtNomeCampoBD = "Celular1";
-      this.mkbCelular1.PrtNomeTabelaBD = null;
-      this.mkbCelular1.PrtQtdCasaDecimal = 2;
-      this.mkbCelular1.PrtQtdeCaracteresPermitido = 0;
-      this.mkbCelular1.PrtTabEnter = true;
-      this.mkbCelular1.PrtTipoCampo = Controles.Enums.TipoCampo.FONE;
-      this.mkbCelular1.PrtToolTipMensagem = null;
-      this.mkbCelular1.PrtValidaCampo = true;
-      this.mkbCelular1.PrtValorMaximoPermitido = new decimal(new int[] {
+      this.mkbCelular.BackColor = System.Drawing.SystemColors.Menu;
+      this.mkbCelular.Font = new System.Drawing.Font("Arial", 8F);
+      this.mkbCelular.ForeColor = System.Drawing.Color.Black;
+      this.mkbCelular.Location = new System.Drawing.Point(314, 297);
+      this.mkbCelular.Name = "mkbCelular";
+      this.mkbCelular.PromptChar = ' ';
+      this.mkbCelular.PrtAceitaValorNegativo = false;
+      this.mkbCelular.PrtAtivaPesquisa = false;
+      this.mkbCelular.PrtAtivarUpperCase = false;
+      this.mkbCelular.PrtAtivaValidacao = true;
+      this.mkbCelular.PrtCampoObrigatorio = false;
+      this.mkbCelular.PrtDesabilitarControle = false;
+      this.mkbCelular.PrtGravaParametroTela = false;
+      this.mkbCelular.PrtIniciaFocusControle = false;
+      this.mkbCelular.PrtLabelDescricao = null;
+      this.mkbCelular.PrtManterAlinhamentoLeft = false;
+      this.mkbCelular.PrtMensagemCampoObrigatorio = "Campo não pode ser vazio !";
+      this.mkbCelular.PrtMontaTelaAutomatico = true;
+      this.mkbCelular.PrtNaoLimparControle = false;
+      this.mkbCelular.PrtNomeCampoBD = "Celular";
+      this.mkbCelular.PrtNomeTabelaBD = null;
+      this.mkbCelular.PrtQtdCasaDecimal = 2;
+      this.mkbCelular.PrtQtdeCaracteresPermitido = 0;
+      this.mkbCelular.PrtTabEnter = true;
+      this.mkbCelular.PrtTipoCampo = Controles.Enums.TipoCampo.FONE;
+      this.mkbCelular.PrtToolTipMensagem = null;
+      this.mkbCelular.PrtValidaCampo = true;
+      this.mkbCelular.PrtValorMaximoPermitido = new decimal(new int[] {
             20,
             0,
             0,
             0});
-      this.mkbCelular1.PrtValorPadrao = null;
-      this.mkbCelular1.Size = new System.Drawing.Size(129, 18);
-      this.mkbCelular1.TabIndex = 61;
+      this.mkbCelular.PrtValorPadrao = null;
+      this.mkbCelular.Size = new System.Drawing.Size(129, 18);
+      this.mkbCelular.TabIndex = 14;
       // 
       // labelEdit17
       // 
@@ -795,7 +803,7 @@
             0});
       this.mkbTelefone.PrtValorPadrao = null;
       this.mkbTelefone.Size = new System.Drawing.Size(129, 18);
-      this.mkbTelefone.TabIndex = 60;
+      this.mkbTelefone.TabIndex = 13;
       // 
       // labelEdit15
       // 
@@ -845,7 +853,7 @@
       this.txtEmail.PrtToolTipMensagem = null;
       this.txtEmail.PrtValorPadrao = null;
       this.txtEmail.Size = new System.Drawing.Size(509, 18);
-      this.txtEmail.TabIndex = 59;
+      this.txtEmail.TabIndex = 12;
       // 
       // frmCadClientes
       // 
@@ -874,7 +882,7 @@
         private Controles.LabelEdit labelEdit13;
         private Controles.TextBoxEdit txtCodigoMunicipio;
         private Controles.LabelEdit labelEdit18;
-        private Controles.MaskedTextBoxEdit mkbCelular1;
+        private Controles.MaskedTextBoxEdit mkbCelular;
         private Controles.LabelEdit labelEdit17;
         private Controles.MaskedTextBoxEdit mkbTelefone;
         private Controles.LabelEdit labelEdit15;
@@ -890,10 +898,10 @@
         private Controles.LabelEdit labelEdit8;
         private Controles.TextBoxEdit txtEndereco;
         private Controles.LabelEdit labelEdit3;
-        private Controles.TextBoxEdit textBoxEdit1;
+        private Controles.TextBoxEdit txtApelido;
         private Controles.LabelEdit labelEdit2;
-        private Controles.TextBoxEdit txtRazao_Social;
+        private Controles.TextBoxEdit txtNome;
         private Controles.LabelEdit labelEdit1;
-        private Controles.TextBoxEdit txtCodigoFilial;
+        private Controles.TextBoxEdit txtCodigoCliente;
     }
 }

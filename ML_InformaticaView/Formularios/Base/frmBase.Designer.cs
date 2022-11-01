@@ -132,7 +132,6 @@
             this.Padding = new System.Windows.Forms.Padding(5, 0, 5, 5);
             this.Text = "frmBase";
             this.Shown += new System.EventHandler(this.frmBase_Shown);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBase_KeyDown);
             this.Move += new System.EventHandler(this.frmBase_Move);
             this.pnlTopo.ResumeLayout(false);
             this.pnlTopo.PerformLayout();

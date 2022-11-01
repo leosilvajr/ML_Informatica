@@ -133,6 +133,7 @@ namespace ML_Informatica.Dal
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("NOME", param.Nome, FbDbType.VarChar));
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("APELIDO", param.Apelido, FbDbType.VarChar));
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("ENDERECO", param.Endereco, FbDbType.VarChar));
+            cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("NUMERO", param.Numero, FbDbType.VarChar));
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("COMPLEMENTO", param.Complemento, FbDbType.VarChar));
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("BAIRRO", param.Bairro, FbDbType.VarChar));
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("CODIGO_MUNICIPIO", param.CodigoMunicipio.ToString(), FbDbType.Integer));
@@ -140,7 +141,6 @@ namespace ML_Informatica.Dal
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("TELEFONE", param.Telefone, FbDbType.VarChar));
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("CELULAR", param.Celular, FbDbType.VarChar));
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("EMAIL", param.Email, FbDbType.VarChar));
-
 
             cmd.Parameters.Add(FirebirdDal.GetInstancia.Add_Parametro_SetEntrada("wtip", ((char)wTipo).ToString(), FbDbType.Char));
 

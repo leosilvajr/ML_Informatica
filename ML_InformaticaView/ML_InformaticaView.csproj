@@ -115,6 +115,12 @@
     <Compile Include="Formularios\Configuracoes\frmConfigBanco.Designer.cs">
       <DependentUpon>frmConfigBanco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Consultas\frmConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Consultas\frmConsultaClientes.Designer.cs">
+      <DependentUpon>frmConsultaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Consultas\frmConsultaMunicipio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Configuracoes\frmConfigBanco.resx">
       <DependentUpon>frmConfigBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Consultas\frmConsultaClientes.resx">
+      <DependentUpon>frmConsultaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Consultas\frmConsultaMunicipio.resx">
       <DependentUpon>frmConsultaMunicipio.cs</DependentUpon>

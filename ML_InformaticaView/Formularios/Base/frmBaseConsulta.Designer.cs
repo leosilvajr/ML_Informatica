@@ -84,7 +84,9 @@
       // 
       // txtPesquisa
       // 
+      this.txtPesquisa.BackColor = System.Drawing.Color.White;
       this.txtPesquisa.Font = new System.Drawing.Font("Arial", 8F);
+      this.txtPesquisa.ForeColor = System.Drawing.Color.Black;
       this.txtPesquisa.Location = new System.Drawing.Point(5, 68);
       this.txtPesquisa.Name = "txtPesquisa";
       this.txtPesquisa.PromptChar = ' ';
@@ -340,6 +342,7 @@
       this.Text = "frmBaseConsulta";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBaseConsulta_FormClosing);
       this.Shown += new System.EventHandler(this.frmBaseConsulta_Shown);
+      this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBaseConsulta_KeyDown);
       this.pnlTopo.ResumeLayout(false);
       this.pnlTopo.PerformLayout();
       this.pnlBase.ResumeLayout(false);

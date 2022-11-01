@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ML_InformaticaNegocios
 {
-  internal class ClientesNegocio
+  public class ClientesNegocio
   {
     private ClientesDal dal = new ClientesDal();
     public List<ClientesEntidade> PesquisaLista(ClientesEntidade param, bool fullSearch = false, string tipoBusca = "", string filtroAdicional = "")
@@ -28,7 +28,7 @@ namespace ML_InformaticaNegocios
       return dal.PegaDadosById(codigo_cliente, fullSearch);
     }
 
-    public Dictionary<int, string> Faz_Filial(ClientesEntidade param, EnumsEntidade.TipoAcaoProcedure wTipo)
+    public Dictionary<int, string> Faz_Cliente(ClientesEntidade param, EnumsEntidade.TipoAcaoProcedure wTipo)
     {
       try
       {
