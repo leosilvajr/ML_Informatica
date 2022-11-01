@@ -127,6 +127,12 @@
     <Compile Include="Formularios\Consultas\frmConsultaMunicipio.Designer.cs">
       <DependentUpon>frmConsultaMunicipio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Principal\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Principal\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Principal\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Consultas\frmConsultaMunicipio.resx">
       <DependentUpon>frmConsultaMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Principal\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

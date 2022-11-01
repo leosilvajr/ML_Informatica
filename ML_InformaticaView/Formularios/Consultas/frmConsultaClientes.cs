@@ -41,7 +41,7 @@ namespace ML_InformaticaView.Formularios.Consultas
       {
         ClientesEntidade ent = new ClientesEntidade();
         int? codigo = dgvGrid.CurrentRow.Cells["CODIGO"].Value.ToString().GetToIntExt();
-        ent = lista.Where(m => m.CodigoMunicipio == codigo).FirstOrDefault();
+        ent = lista.Where(m => m.CodigoCliente == codigo).FirstOrDefault();
 
         RetornoConsulta(ent); //aciona metodo responsavel por enviar retorno para requerente.
         return true;

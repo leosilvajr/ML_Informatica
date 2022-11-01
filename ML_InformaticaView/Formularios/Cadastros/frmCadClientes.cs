@@ -231,16 +231,6 @@ namespace ML_InformaticaView.Formularios.Cadastros
       }
     }
 
-    private void txtCodigoCliente_TextChanged(object sender, EventArgs e)
-    {
-      if (this.ActiveControl == txtCodigoCliente)
-      {
-        txtCodigoCliente.PrtNaoLimparControle = true;
-        this.LimpaControles(this.Controls);
-        txtCodigoCliente.PrtNaoLimparControle = false;
-      }
-    }
-
     private void txtCodigoMunicipio_KeyDown(object sender, KeyEventArgs e)
     {
       if (e.KeyCode == Keys.F3)
@@ -256,17 +246,6 @@ namespace ML_InformaticaView.Formularios.Cadastros
       if (Status == Enums.AcaoTelaStatus.Incluindo)
       {
         this.SetFocusProximoControle();
-      }
-    }
-
-    private void txtCodigoCliente_KeyDown(object sender, KeyEventArgs e)
-    {
-      if (e.KeyCode == Keys.F3)
-      {
-        frmConsultaClientes consultaClientes = new frmConsultaClientes();
-        consultaClientes.SetRetornoConsultaCallback = new Util.DelegateRetornoConsulta<ClientesEntidade>(RetornoConsultaCallbackFn);
-        //consultaFilial.CodigoEmpresaAtiva = filial.CodigoEmpresa;
-        Util.AbreForm(this, consultaClientes);
       }
     }
 
@@ -303,6 +282,16 @@ namespace ML_InformaticaView.Formularios.Cadastros
       }
 
 
+    }
+
+    private void txtCodigoCliente_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyCode == Keys.F3)
+      {
+      frmConsultaClientes consultaClientes = new frmConsultaClientes();
+      consultaClientes.SetRetornoConsultaCallback = new Util.DelegateRetornoConsulta<ClientesEntidade>(RetornoConsultaCallbackFn);
+      Util.AbreForm(this, consultaClientes);
+      }
     }
   }
   }

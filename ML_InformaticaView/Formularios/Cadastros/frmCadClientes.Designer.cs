@@ -299,7 +299,7 @@
       this.txtNome.PrtAceitaNumeros = false;
       this.txtNome.PrtAtivaPesquisa = false;
       this.txtNome.PrtAtivaValidacao = true;
-      this.txtNome.PrtCampoObrigatorio = false;
+      this.txtNome.PrtCampoObrigatorio = true;
       this.txtNome.PrtCaracteresEspeciais = null;
       this.txtNome.PrtDesabilitarControle = false;
       this.txtNome.PrtGravaParametroTela = false;
@@ -368,7 +368,6 @@
       this.txtCodigoCliente.PrtValorPadrao = null;
       this.txtCodigoCliente.Size = new System.Drawing.Size(64, 18);
       this.txtCodigoCliente.TabIndex = 3;
-      this.txtCodigoCliente.TextChanged += new System.EventHandler(this.txtCodigoCliente_TextChanged);
       this.txtCodigoCliente.Enter += new System.EventHandler(this.txtCodigoCliente_Enter);
       this.txtCodigoCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoCliente_KeyDown);
       this.txtCodigoCliente.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigoCliente_Validating);

@@ -41,6 +41,8 @@
       this.picMenu = new Controles.PictureBoxEdit();
       this.pnlBarraDireita = new Controles.PanelEdit();
       this.pnlRodape = new Controles.PanelEdit();
+      this.lblHorario = new Controles.LabelEdit();
+      this.lblData = new Controles.LabelEdit();
       this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
       this.menuStripConfiguracoes = new Controles.MenuStripEdit();
       this.bancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,11 +58,13 @@
       this.menuStripUltilitarios = new Controles.MenuStripEdit();
       this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+      this.timer = new System.Windows.Forms.Timer(this.components);
       this.pnlTopo.SuspendLayout();
       this.pnlBase.SuspendLayout();
       this.pnlMenu.SuspendLayout();
       this.pnlArtMenu.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.picMenu)).BeginInit();
+      this.pnlRodape.SuspendLayout();
       this.menuStripConfiguracoes.SuspendLayout();
       this.menuStripCadastros.SuspendLayout();
       this.menuStripRelatorios.SuspendLayout();
@@ -79,7 +83,7 @@
       this.pnlBase.Controls.Add(this.menuStripCadastros);
       this.pnlBase.Controls.Add(this.menuStripConfiguracoes);
       this.pnlBase.Location = new System.Drawing.Point(200, 29);
-      this.pnlBase.Size = new System.Drawing.Size(1090, 690);
+      this.pnlBase.Size = new System.Drawing.Size(1090, 587);
       // 
       // btnSair
       // 
@@ -92,6 +96,12 @@
       this.btnMinimizar.FlatAppearance.BorderSize = 0;
       this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
       this.btnMinimizar.Location = new System.Drawing.Point(1042, 0);
+      // 
+      // lblTituloForm
+      // 
+      this.lblTituloForm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblTituloForm.Size = new System.Drawing.Size(126, 21);
+      this.lblTituloForm.Text = "ML Informática";
       // 
       // pnlMenu
       // 
@@ -314,17 +324,53 @@
       this.pnlBarraDireita.Location = new System.Drawing.Point(1290, 0);
       this.pnlBarraDireita.Name = "pnlBarraDireita";
       this.pnlBarraDireita.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlBarraDireita.Size = new System.Drawing.Size(5, 745);
+      this.pnlBarraDireita.Size = new System.Drawing.Size(5, 645);
       this.pnlBarraDireita.TabIndex = 3;
       // 
       // pnlRodape
       // 
+      this.pnlRodape.Controls.Add(this.lblHorario);
+      this.pnlRodape.Controls.Add(this.lblData);
       this.pnlRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-      this.pnlRodape.Location = new System.Drawing.Point(200, 719);
+      this.pnlRodape.Location = new System.Drawing.Point(200, 616);
       this.pnlRodape.Name = "pnlRodape";
       this.pnlRodape.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlRodape.Size = new System.Drawing.Size(1090, 26);
+      this.pnlRodape.Size = new System.Drawing.Size(1090, 29);
       this.pnlRodape.TabIndex = 4;
+      // 
+      // lblHorario
+      // 
+      this.lblHorario.AutoSize = true;
+      this.lblHorario.BackColor = System.Drawing.Color.Transparent;
+      this.lblHorario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblHorario.ForeColor = System.Drawing.Color.White;
+      this.lblHorario.Location = new System.Drawing.Point(174, 4);
+      this.lblHorario.Name = "lblHorario";
+      this.lblHorario.PrtMontaTelaAutomatico = false;
+      this.lblHorario.PrtNaoLimparControle = true;
+      this.lblHorario.PrtNomeCampoBD = "";
+      this.lblHorario.PrtValorPadrao = null;
+      this.lblHorario.Size = new System.Drawing.Size(72, 21);
+      this.lblHorario.TabIndex = 5;
+      this.lblHorario.Text = "Horário:";
+      this.lblHorario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
+      // lblData
+      // 
+      this.lblData.AutoSize = true;
+      this.lblData.BackColor = System.Drawing.Color.Transparent;
+      this.lblData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.lblData.ForeColor = System.Drawing.Color.White;
+      this.lblData.Location = new System.Drawing.Point(3, 4);
+      this.lblData.Name = "lblData";
+      this.lblData.PrtMontaTelaAutomatico = false;
+      this.lblData.PrtNaoLimparControle = true;
+      this.lblData.PrtNomeCampoBD = "";
+      this.lblData.PrtValorPadrao = null;
+      this.lblData.Size = new System.Drawing.Size(54, 21);
+      this.lblData.TabIndex = 3;
+      this.lblData.Text = "Data: ";
+      this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // sidebarTimer
       // 
@@ -453,11 +499,16 @@
       this.toolStripMenuItem6.Text = "Calculadora";
       this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
       // 
+      // timer
+      // 
+      this.timer.Enabled = true;
+      this.timer.Tick += new System.EventHandler(this.timer_Tick);
+      // 
       // frmPrincipal
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1300, 750);
+      this.ClientSize = new System.Drawing.Size(1300, 650);
       this.Controls.Add(this.pnlRodape);
       this.Controls.Add(this.pnlBarraDireita);
       this.Controls.Add(this.pnlMenu);
@@ -478,6 +529,8 @@
       this.pnlArtMenu.ResumeLayout(false);
       this.pnlArtMenu.PerformLayout();
       ((System.ComponentModel.ISupportInitialize)(this.picMenu)).EndInit();
+      this.pnlRodape.ResumeLayout(false);
+      this.pnlRodape.PerformLayout();
       this.menuStripConfiguracoes.ResumeLayout(false);
       this.menuStripConfiguracoes.PerformLayout();
       this.menuStripCadastros.ResumeLayout(false);
@@ -519,5 +572,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem municípiosToolStripMenuItem;
+        private Controles.LabelEdit lblHorario;
+        private Controles.LabelEdit lblData;
+        private System.Windows.Forms.Timer timer;
     }
 }

@@ -23,7 +23,7 @@ namespace ML_InformaticaView.Formularios.Principal
     public frmPrincipal()
     {
       InitializeComponent();
-      lblTituloForm.Visible = false;
+
     }
     private int borderWidth = 5; //Exemplo apenas para teste
     private new Padding Padding = new Padding(50); //Exemplo apenas para teste (Pode ser especificado direto nas propriedades do Form)
@@ -81,7 +81,7 @@ namespace ML_InformaticaView.Formularios.Principal
       }
     }
 
-      [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+    [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
     private extern static void ReleaseCapture();
     [DllImport("user32.DLL", EntryPoint = "SendMessage")]
     private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
@@ -196,6 +196,12 @@ namespace ML_InformaticaView.Formularios.Principal
     {
       frmCadClientes cadClientes = new frmCadClientes();
       Util.AbreForm(pnlBase, cadClientes);
+    }
+
+    private void timer_Tick(object sender, EventArgs e)
+    {
+      lblData.Text = "Data: " + DateTime.Today.ToString("dd/MM/yyyy");
+      lblHorario.Text = "Horário: " + DateTime.Now.ToString("HH:mm:ss");
     }
   }
 }
