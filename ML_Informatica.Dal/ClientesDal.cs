@@ -23,7 +23,7 @@ namespace ML_Informatica.Dal
 
       return parametrosTratados;
     }
-    public ClientesEntidade PegaDadosById(int codigo_Cliente, bool fullSearch = false)
+    public ClientesEntidade PegaDadosById(int? codigo_Cliente, bool fullSearch = false)
     {
       try
       {

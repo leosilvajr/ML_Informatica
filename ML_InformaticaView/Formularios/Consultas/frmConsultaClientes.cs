@@ -25,9 +25,6 @@ namespace ML_InformaticaView.Formularios.Consultas
     {
       InitializeComponent();
       clientesNegocio = new ClientesNegocio();
-
-      //uso aqui o MontaTela para que seja capturado o nome da consulta para gravar no arquivo Json
-      //obs: não usar no formulario base.
       base.MontaTela();
 
     }
@@ -43,7 +40,7 @@ namespace ML_InformaticaView.Formularios.Consultas
       try
       {
         ClientesEntidade ent = new ClientesEntidade();
-        int? codigo = dgvGrid.CurrentRow.Cells["Cod"].Value.ToString().GetToIntExt();
+        int? codigo = dgvGrid.CurrentRow.Cells["CODIGO"].Value.ToString().GetToIntExt();
         ent = lista.Where(m => m.CodigoMunicipio == codigo).FirstOrDefault();
 
         RetornoConsulta(ent); //aciona metodo responsavel por enviar retorno para requerente.
@@ -62,6 +59,8 @@ namespace ML_InformaticaView.Formularios.Consultas
     {
       try
       {
+        base.Func_FazPesquisa();
+
         dgvGrid.DataSource = null;
         dgvGrid.Refresh();
         ssrQtdReg.Text = "0";
@@ -69,12 +68,12 @@ namespace ML_InformaticaView.Formularios.Consultas
         ClientesEntidade param = new ClientesEntidade();
 
         string valorPesquisa;
-
         valorPesquisa = string.IsNullOrEmpty(txtPesquisa.Text) ? null : txtPesquisa.Text;
 
-        if (valueComboPesquisa == 01) //Codigo do Municipio
+
+        if (valueComboPesquisa == 01) //Codigo 
           param.CodigoCliente = !string.IsNullOrEmpty(valorPesquisa) ? valorPesquisa.GetToIntExt() : null;
-        else if (valueComboPesquisa == 02) // Nome Municipio
+        else if (valueComboPesquisa == 02) // Nome
           param.Nome = valorPesquisa;
 
         string whereFiltro = null;
@@ -85,12 +84,13 @@ namespace ML_InformaticaView.Formularios.Consultas
         var display = lista
           .Select(d => new
           {
-            Cod = d.CodigoCliente,
+            Codigo = d.CodigoCliente,
             Nome = d.Nome,
             Apelido = d.Apelido,
             Telefone = d.Telefone,
             Celular = d.Celular,
           }).ToList();
+
         dgvGrid.DataSource = display;
         ssrQtdReg.Text = display.Count().ToString();
 

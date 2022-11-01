@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,10 @@ namespace ML_InformaticaView.Formularios.Cadastros
     ClientesNegocio negocio;
     MunicipioNegocio negocioMunicipio;
 
+    public Util.DelegateRetornoConsulta<ClientesEntidade> SetRetornoConsultaCallback;
+    //private TelasConsultaEntidade paramTela;
+    private JsonGeneric<TelasConsultaEntidade> json;
+
     public frmCadClientes()
     {
       InitializeComponent();
@@ -29,21 +34,23 @@ namespace ML_InformaticaView.Formularios.Cadastros
       negocio = new ClientesNegocio();
       negocioMunicipio = new MunicipioNegocio();
       lblTituloForm.Text = "Cadastro de Clientes";
+      json = new JsonGeneric<TelasConsultaEntidade>(this.Name);
     }
-    //private void Func_PesquisaById(int? codigo_cliente)
-    //{
-    //  try
-    //  {
-    //    var _cliente = negocio.PesquisaById((int)codigo_cliente);
-    //    cliente = _cliente != null ? _cliente : cliente;
-    //    MontaTela();
 
-    //  }
-    //  catch (Exception ex)
-    //  {
-    //    Mensagem.MostraErro(ex.Message);
-    //  }
-    //}
+    public override void Func_PesquisaById(int? codigo)
+    {
+      try
+      {
+        cliente = negocio.PesquisaById((int)codigo, true);
+        MontaTela();
+
+      }
+      catch (Exception ex)
+      {
+        Mensagem.MostraErro(ex.Message);
+      }
+    }
+
 
     private void Func_PesquisaById_Municipio(int? codigo)
     {
@@ -69,9 +76,11 @@ namespace ML_InformaticaView.Formularios.Cadastros
       {
         cliente = entidade;
         MontaTela();
+
       }
       catch (Exception ex)
       {
+
         Mensagem.MostraErro(ex.Message);
       }
     }
@@ -95,20 +104,7 @@ namespace ML_InformaticaView.Formularios.Cadastros
     {
       try
       {
-        //metodo generico que preenche automaticamente os campos em tela 
         base.MontaTela(cliente);
-
-
-        //if (cliente != null)
-        //{
-        //  if (!string.IsNullOrEmpty(cliente.CodigoCliente.ToString()))
-        //    txtCodigoCliente.Enabled = true;
-        //  else
-        //    txtCodigoCliente.Enabled = false;
-        //}
-        //else
-        //  txtCodigoCliente.Enabled = false;
-
       }
       catch (Exception ex)
       {
@@ -159,7 +155,6 @@ namespace ML_InformaticaView.Formularios.Cadastros
     {
       try
       {
-        //base.Func_AcaoGravar();
         cliente = cliente ?? new ClientesEntidade();
         cliente = null;
         cliente = new ClientesEntidade
@@ -222,21 +217,17 @@ namespace ML_InformaticaView.Formularios.Cadastros
     {
       try
       {
-        if (txtCodigoCliente.GetToIntEx() > 0 && string.IsNullOrEmpty(txtNome.Text))
+        if (txtCodigoCliente.GetToIntEx() > 0 && Status != Enums.AcaoTelaStatus.Incluindo)
         {
-
-          Func_PesquisaById(int.Parse(txtCodigoCliente.Text));
-          if (cliente == null || cliente.CodigoCliente.GetValueOrDefault() == 0)
-          {
+          Func_PesquisaById(txtCodigoCliente.GetToIntEx());
+          if (cliente == null)
             e.Cancel = true;
-          }
         }
       }
-
       catch (Exception ex)
       {
-
         Mensagem.MostraErro(ex.Message);
+
       }
     }
 
@@ -245,12 +236,7 @@ namespace ML_InformaticaView.Formularios.Cadastros
       if (this.ActiveControl == txtCodigoCliente)
       {
         txtCodigoCliente.PrtNaoLimparControle = true;
-
         this.LimpaControles(this.Controls);
-        cliente = null;
-        cliente = new ClientesEntidade();
-        cliente.CodigoCliente = txtCodigoCliente.GetToIntEx();
-        cliente.Nome = txtNome.Text;
         txtCodigoCliente.PrtNaoLimparControle = false;
       }
     }
