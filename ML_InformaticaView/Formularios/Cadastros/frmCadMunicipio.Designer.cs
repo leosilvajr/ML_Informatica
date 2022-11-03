@@ -189,6 +189,7 @@
       this.txtCodMunicipio.Size = new System.Drawing.Size(61, 18);
       this.txtCodMunicipio.TabIndex = 7;
       this.txtCodMunicipio.TextChanged += new System.EventHandler(this.txtCodMunicipio_TextChanged);
+      this.txtCodMunicipio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodMunicipio_KeyDown);
       this.txtCodMunicipio.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodMunicipio_Validating);
       // 
       // txtNomeMunicipio
@@ -262,7 +263,7 @@
       // 
       this.labelEdit1.AutoSize = true;
       this.labelEdit1.BackColor = System.Drawing.Color.Transparent;
-      this.labelEdit1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelEdit1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.labelEdit1.ForeColor = System.Drawing.Color.Black;
       this.labelEdit1.Location = new System.Drawing.Point(24, 112);
       this.labelEdit1.Name = "labelEdit1";
@@ -270,7 +271,7 @@
       this.labelEdit1.PrtNaoLimparControle = true;
       this.labelEdit1.PrtNomeCampoBD = "";
       this.labelEdit1.PrtValorPadrao = null;
-      this.labelEdit1.Size = new System.Drawing.Size(43, 14);
+      this.labelEdit1.Size = new System.Drawing.Size(49, 14);
       this.labelEdit1.TabIndex = 12;
       this.labelEdit1.Text = "Código:";
       this.labelEdit1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

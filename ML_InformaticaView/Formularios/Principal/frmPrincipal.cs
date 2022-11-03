@@ -94,7 +94,7 @@ namespace ML_InformaticaView.Formularios.Principal
           if (botao.ContainsFocus)
             botao.BackColor = Color.FromArgb(2, 80, 110);//2; 80; 110
           else
-            botao.BackColor = Color.FromArgb(1,60,90); //Cor padrao 1; 60; 90
+            botao.BackColor = Color.FromArgb(1, 60, 90); //Cor padrao 1; 60; 90
         }
       }
     }
@@ -202,6 +202,12 @@ namespace ML_InformaticaView.Formularios.Principal
     {
       lblData.Text = "Data: " + DateTime.Today.ToString("dd/MM/yyyy");
       lblHorario.Text = "Horário: " + DateTime.Now.ToString("HH:mm:ss");
+    }
+
+    private void serviçosToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      frmCadServico cadServico = new frmCadServico();
+      Util.AbreForm(pnlBase, cadServico);
     }
   }
 }

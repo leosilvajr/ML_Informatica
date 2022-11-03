@@ -51,6 +51,7 @@
       this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
       this.municípiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.menuStripRelatorios = new Controles.MenuStripEdit();
       this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +75,7 @@
       // pnlTopo
       // 
       this.pnlTopo.Location = new System.Drawing.Point(200, 0);
-      this.pnlTopo.Size = new System.Drawing.Size(1090, 29);
+      this.pnlTopo.Size = new System.Drawing.Size(890, 29);
       // 
       // pnlBase
       // 
@@ -83,19 +84,19 @@
       this.pnlBase.Controls.Add(this.menuStripCadastros);
       this.pnlBase.Controls.Add(this.menuStripConfiguracoes);
       this.pnlBase.Location = new System.Drawing.Point(200, 29);
-      this.pnlBase.Size = new System.Drawing.Size(1090, 593);
+      this.pnlBase.Size = new System.Drawing.Size(890, 543);
       // 
       // btnSair
       // 
       this.btnSair.FlatAppearance.BorderSize = 0;
       this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-      this.btnSair.Location = new System.Drawing.Point(1066, 0);
+      this.btnSair.Location = new System.Drawing.Point(866, 0);
       // 
       // btnMinimizar
       // 
       this.btnMinimizar.FlatAppearance.BorderSize = 0;
       this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-      this.btnMinimizar.Location = new System.Drawing.Point(1042, 0);
+      this.btnMinimizar.Location = new System.Drawing.Point(842, 0);
       // 
       // lblTituloForm
       // 
@@ -128,7 +129,8 @@
       this.btnEncerrar.BackColor = System.Drawing.Color.Transparent;
       this.btnEncerrar.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnEncerrar.FlatAppearance.BorderSize = 0;
-      this.btnEncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+      this.btnEncerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.btnEncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.btnEncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnEncerrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnEncerrar.ForeColor = System.Drawing.Color.White;
@@ -154,7 +156,8 @@
       this.btnUltilitarios.BackColor = System.Drawing.Color.Transparent;
       this.btnUltilitarios.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnUltilitarios.FlatAppearance.BorderSize = 0;
-      this.btnUltilitarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+      this.btnUltilitarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.btnUltilitarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.btnUltilitarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnUltilitarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnUltilitarios.ForeColor = System.Drawing.Color.White;
@@ -180,7 +183,8 @@
       this.btnConfiguracoes.BackColor = System.Drawing.Color.Transparent;
       this.btnConfiguracoes.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnConfiguracoes.FlatAppearance.BorderSize = 0;
-      this.btnConfiguracoes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+      this.btnConfiguracoes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.btnConfiguracoes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnConfiguracoes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnConfiguracoes.ForeColor = System.Drawing.Color.White;
@@ -206,7 +210,8 @@
       this.btnRelatorios.BackColor = System.Drawing.Color.Transparent;
       this.btnRelatorios.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnRelatorios.FlatAppearance.BorderSize = 0;
-      this.btnRelatorios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+      this.btnRelatorios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.btnRelatorios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnRelatorios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnRelatorios.ForeColor = System.Drawing.Color.White;
@@ -232,7 +237,8 @@
       this.btnCadastros.BackColor = System.Drawing.Color.Transparent;
       this.btnCadastros.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnCadastros.FlatAppearance.BorderSize = 0;
-      this.btnCadastros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+      this.btnCadastros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.btnCadastros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnCadastros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnCadastros.ForeColor = System.Drawing.Color.White;
@@ -258,7 +264,8 @@
       this.btnInicio.BackColor = System.Drawing.Color.Transparent;
       this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
       this.btnInicio.FlatAppearance.BorderSize = 0;
-      this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+      this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnInicio.ForeColor = System.Drawing.Color.White;
@@ -323,10 +330,10 @@
       // 
       this.pnlBarraDireita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.pnlBarraDireita.Dock = System.Windows.Forms.DockStyle.Right;
-      this.pnlBarraDireita.Location = new System.Drawing.Point(1290, 0);
+      this.pnlBarraDireita.Location = new System.Drawing.Point(1090, 0);
       this.pnlBarraDireita.Name = "pnlBarraDireita";
       this.pnlBarraDireita.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlBarraDireita.Size = new System.Drawing.Size(5, 645);
+      this.pnlBarraDireita.Size = new System.Drawing.Size(5, 595);
       this.pnlBarraDireita.TabIndex = 3;
       // 
       // pnlRodape
@@ -335,10 +342,10 @@
       this.pnlRodape.Controls.Add(this.lblHorario);
       this.pnlRodape.Controls.Add(this.lblData);
       this.pnlRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-      this.pnlRodape.Location = new System.Drawing.Point(200, 622);
+      this.pnlRodape.Location = new System.Drawing.Point(200, 572);
       this.pnlRodape.Name = "pnlRodape";
       this.pnlRodape.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlRodape.Size = new System.Drawing.Size(1090, 23);
+      this.pnlRodape.Size = new System.Drawing.Size(890, 23);
       this.pnlRodape.TabIndex = 4;
       // 
       // lblHorario
@@ -414,7 +421,7 @@
             this.toolStripMenuItem1});
       this.menuStripCadastros.Location = new System.Drawing.Point(0, 0);
       this.menuStripCadastros.Name = "menuStripCadastros";
-      this.menuStripCadastros.Size = new System.Drawing.Size(1090, 24);
+      this.menuStripCadastros.Size = new System.Drawing.Size(890, 24);
       this.menuStripCadastros.TabIndex = 1;
       this.menuStripCadastros.Text = "menuStripEdit1";
       this.menuStripCadastros.Visible = false;
@@ -423,7 +430,8 @@
       // 
       this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
-            this.municípiosToolStripMenuItem});
+            this.municípiosToolStripMenuItem,
+            this.serviçosToolStripMenuItem});
       this.toolStripMenuItem1.Name = "toolStripMenuItem1";
       this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
       this.toolStripMenuItem1.Text = "Cadastros";
@@ -431,16 +439,23 @@
       // toolStripMenuItem2
       // 
       this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-      this.toolStripMenuItem2.Size = new System.Drawing.Size(133, 22);
+      this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
       this.toolStripMenuItem2.Text = "Clientes";
       this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
       // 
       // municípiosToolStripMenuItem
       // 
       this.municípiosToolStripMenuItem.Name = "municípiosToolStripMenuItem";
-      this.municípiosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+      this.municípiosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
       this.municípiosToolStripMenuItem.Text = "Municípios";
       this.municípiosToolStripMenuItem.Click += new System.EventHandler(this.municípiosToolStripMenuItem_Click);
+      // 
+      // serviçosToolStripMenuItem
+      // 
+      this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
+      this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.serviçosToolStripMenuItem.Text = "Serviços";
+      this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
       // 
       // menuStripRelatorios
       // 
@@ -512,11 +527,12 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-      this.ClientSize = new System.Drawing.Size(1300, 650);
+      this.ClientSize = new System.Drawing.Size(1100, 600);
       this.Controls.Add(this.pnlRodape);
       this.Controls.Add(this.pnlBarraDireita);
       this.Controls.Add(this.pnlMenu);
-      this.MinimumSize = new System.Drawing.Size(1200, 600);
+      this.MaximumSize = new System.Drawing.Size(1390, 800);
+      this.MinimumSize = new System.Drawing.Size(1100, 600);
       this.Name = "frmPrincipal";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "frmPrincipal";
@@ -579,5 +595,6 @@
         private Controles.LabelEdit lblHorario;
         private Controles.LabelEdit lblData;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ToolStripMenuItem serviçosToolStripMenuItem;
     }
 }

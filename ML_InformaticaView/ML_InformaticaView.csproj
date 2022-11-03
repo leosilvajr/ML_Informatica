@@ -109,6 +109,12 @@
     <Compile Include="Formularios\Cadastros\frmCadMunicipio.Designer.cs">
       <DependentUpon>frmCadMunicipio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Cadastros\frmCadServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastros\frmCadServico.Designer.cs">
+      <DependentUpon>frmCadServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Configuracoes\frmConfigBanco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="Formularios\Consultas\frmConsultaMunicipio.Designer.cs">
       <DependentUpon>frmConsultaMunicipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Consultas\frmConsultaServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Consultas\frmConsultaServico.Designer.cs">
+      <DependentUpon>frmConsultaServico.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Principal\frmLogin.cs">
       <SubType>Form</SubType>
@@ -160,6 +172,9 @@
     <EmbeddedResource Include="Formularios\Cadastros\frmCadMunicipio.resx">
       <DependentUpon>frmCadMunicipio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastros\frmCadServico.resx">
+      <DependentUpon>frmCadServico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Configuracoes\frmConfigBanco.resx">
       <DependentUpon>frmConfigBanco.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Consultas\frmConsultaMunicipio.resx">
       <DependentUpon>frmConsultaMunicipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Consultas\frmConsultaServico.resx">
+      <DependentUpon>frmConsultaServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

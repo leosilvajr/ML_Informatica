@@ -18,7 +18,7 @@ namespace ML_Informatica.Dal
     private ClientesEntidade Func_TrataParametros(ClientesEntidade parametros)
     {
       ClientesEntidade parametrosTratados;
-      parametros.CodigoMunicipio = parametros.CodigoMunicipio > 0 ? parametros.CodigoMunicipio : null;
+      parametros.CodigoCliente = parametros.CodigoCliente > 0 ? parametros.CodigoCliente : null;
       parametrosTratados = parametros;
 
       return parametrosTratados;

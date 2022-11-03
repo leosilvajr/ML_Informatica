@@ -45,6 +45,7 @@
     <Compile Include="ConfiguracaoBancoNegocio.cs" />
     <Compile Include="MunicipioNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicosNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ML_Informatica.Dal\ML_InformaticaDal.csproj">

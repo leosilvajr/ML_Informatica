@@ -192,7 +192,7 @@
       this.labelEdit16.BackColor = System.Drawing.Color.Transparent;
       this.labelEdit16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.labelEdit16.ForeColor = System.Drawing.Color.Black;
-      this.labelEdit16.Location = new System.Drawing.Point(442, 250);
+      this.labelEdit16.Location = new System.Drawing.Point(446, 250);
       this.labelEdit16.Name = "labelEdit16";
       this.labelEdit16.PrtMontaTelaAutomatico = false;
       this.labelEdit16.PrtNaoLimparControle = true;
@@ -208,7 +208,7 @@
       this.lblUf.BackColor = System.Drawing.Color.Transparent;
       this.lblUf.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblUf.ForeColor = System.Drawing.Color.Blue;
-      this.lblUf.Location = new System.Drawing.Point(464, 249);
+      this.lblUf.Location = new System.Drawing.Point(468, 249);
       this.lblUf.Name = "lblUf";
       this.lblUf.PrtMontaTelaAutomatico = true;
       this.lblUf.PrtNaoLimparControle = false;
@@ -223,7 +223,7 @@
       this.lblNomeMunicipio.BackColor = System.Drawing.Color.Transparent;
       this.lblNomeMunicipio.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblNomeMunicipio.ForeColor = System.Drawing.Color.Blue;
-      this.lblNomeMunicipio.Location = new System.Drawing.Point(160, 248);
+      this.lblNomeMunicipio.Location = new System.Drawing.Point(164, 248);
       this.lblNomeMunicipio.Name = "lblNomeMunicipio";
       this.lblNomeMunicipio.PrtMontaTelaAutomatico = true;
       this.lblNomeMunicipio.PrtNaoLimparControle = false;
@@ -237,7 +237,7 @@
       // 
       this.labelEdit13.AutoSize = true;
       this.labelEdit13.BackColor = System.Drawing.Color.Transparent;
-      this.labelEdit13.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelEdit13.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.labelEdit13.ForeColor = System.Drawing.Color.Black;
       this.labelEdit13.Location = new System.Drawing.Point(14, 250);
       this.labelEdit13.Name = "labelEdit13";
@@ -245,7 +245,7 @@
       this.labelEdit13.PrtNaoLimparControle = true;
       this.labelEdit13.PrtNomeCampoBD = null;
       this.labelEdit13.PrtValorPadrao = null;
-      this.labelEdit13.Size = new System.Drawing.Size(79, 14);
+      this.labelEdit13.Size = new System.Drawing.Size(91, 14);
       this.labelEdit13.TabIndex = 40;
       this.labelEdit13.Text = "Cod. Município:";
       this.labelEdit13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,7 +256,7 @@
       this.txtCodigoMunicipio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtCodigoMunicipio.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtCodigoMunicipio.ForeColor = System.Drawing.Color.Black;
-      this.txtCodigoMunicipio.Location = new System.Drawing.Point(102, 248);
+      this.txtCodigoMunicipio.Location = new System.Drawing.Point(106, 248);
       this.txtCodigoMunicipio.MaxLength = 7;
       this.txtCodigoMunicipio.Name = "txtCodigoMunicipio";
       this.txtCodigoMunicipio.PrtAceitaEspaco = false;
@@ -292,7 +292,7 @@
       this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtNome.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtNome.ForeColor = System.Drawing.Color.Black;
-      this.txtNome.Location = new System.Drawing.Point(102, 128);
+      this.txtNome.Location = new System.Drawing.Point(106, 128);
       this.txtNome.MaxLength = 100;
       this.txtNome.Name = "txtNome";
       this.txtNome.PrtAceitaEspaco = false;
@@ -323,7 +323,7 @@
       // 
       this.labelEdit1.AutoSize = true;
       this.labelEdit1.BackColor = System.Drawing.Color.Transparent;
-      this.labelEdit1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelEdit1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.labelEdit1.ForeColor = System.Drawing.Color.Black;
       this.labelEdit1.Location = new System.Drawing.Point(15, 107);
       this.labelEdit1.Name = "labelEdit1";
@@ -331,7 +331,7 @@
       this.labelEdit1.PrtNaoLimparControle = true;
       this.labelEdit1.PrtNomeCampoBD = null;
       this.labelEdit1.PrtValorPadrao = null;
-      this.labelEdit1.Size = new System.Drawing.Size(64, 14);
+      this.labelEdit1.Size = new System.Drawing.Size(74, 14);
       this.labelEdit1.TabIndex = 45;
       this.labelEdit1.Text = "Cód Cliente:";
       this.labelEdit1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -342,7 +342,7 @@
       this.txtCodigoCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtCodigoCliente.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtCodigoCliente.ForeColor = System.Drawing.Color.Black;
-      this.txtCodigoCliente.Location = new System.Drawing.Point(102, 104);
+      this.txtCodigoCliente.Location = new System.Drawing.Point(106, 104);
       this.txtCodigoCliente.MaxLength = 9;
       this.txtCodigoCliente.Name = "txtCodigoCliente";
       this.txtCodigoCliente.PrtAceitaEspaco = false;
@@ -412,7 +412,7 @@
       this.txtApelido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtApelido.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtApelido.ForeColor = System.Drawing.Color.Black;
-      this.txtApelido.Location = new System.Drawing.Point(102, 152);
+      this.txtApelido.Location = new System.Drawing.Point(106, 152);
       this.txtApelido.MaxLength = 100;
       this.txtApelido.Name = "txtApelido";
       this.txtApelido.PrtAceitaEspaco = false;
@@ -517,7 +517,7 @@
       this.txtBairro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtBairro.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtBairro.ForeColor = System.Drawing.Color.Black;
-      this.txtBairro.Location = new System.Drawing.Point(102, 200);
+      this.txtBairro.Location = new System.Drawing.Point(106, 200);
       this.txtBairro.MaxLength = 60;
       this.txtBairro.Name = "txtBairro";
       this.txtBairro.PrtAceitaEspaco = false;
@@ -617,7 +617,7 @@
       this.txtEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtEndereco.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtEndereco.ForeColor = System.Drawing.Color.Black;
-      this.txtEndereco.Location = new System.Drawing.Point(102, 176);
+      this.txtEndereco.Location = new System.Drawing.Point(106, 176);
       this.txtEndereco.MaxLength = 100;
       this.txtEndereco.Name = "txtEndereco";
       this.txtEndereco.PrtAceitaEspaco = false;
@@ -650,7 +650,7 @@
       this.txtComplemento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtComplemento.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtComplemento.ForeColor = System.Drawing.Color.Black;
-      this.txtComplemento.Location = new System.Drawing.Point(102, 224);
+      this.txtComplemento.Location = new System.Drawing.Point(106, 224);
       this.txtComplemento.MaxLength = 60;
       this.txtComplemento.Name = "txtComplemento";
       this.txtComplemento.PrtAceitaEspaco = false;
@@ -700,7 +700,7 @@
       this.labelEdit18.BackColor = System.Drawing.Color.Transparent;
       this.labelEdit18.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.labelEdit18.ForeColor = System.Drawing.Color.Black;
-      this.labelEdit18.Location = new System.Drawing.Point(259, 299);
+      this.labelEdit18.Location = new System.Drawing.Point(263, 299);
       this.labelEdit18.Name = "labelEdit18";
       this.labelEdit18.PrtMontaTelaAutomatico = false;
       this.labelEdit18.PrtNaoLimparControle = true;
@@ -716,7 +716,7 @@
       this.mkbCelular.BackColor = System.Drawing.SystemColors.Menu;
       this.mkbCelular.Font = new System.Drawing.Font("Arial", 8F);
       this.mkbCelular.ForeColor = System.Drawing.Color.Black;
-      this.mkbCelular.Location = new System.Drawing.Point(314, 297);
+      this.mkbCelular.Location = new System.Drawing.Point(318, 297);
       this.mkbCelular.Name = "mkbCelular";
       this.mkbCelular.PromptChar = ' ';
       this.mkbCelular.PrtAceitaValorNegativo = false;
@@ -771,7 +771,7 @@
       this.mkbTelefone.BackColor = System.Drawing.SystemColors.Menu;
       this.mkbTelefone.Font = new System.Drawing.Font("Arial", 8F);
       this.mkbTelefone.ForeColor = System.Drawing.Color.Black;
-      this.mkbTelefone.Location = new System.Drawing.Point(102, 297);
+      this.mkbTelefone.Location = new System.Drawing.Point(106, 297);
       this.mkbTelefone.Name = "mkbTelefone";
       this.mkbTelefone.PromptChar = ' ';
       this.mkbTelefone.PrtAceitaValorNegativo = false;
@@ -827,7 +827,7 @@
       this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.txtEmail.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtEmail.ForeColor = System.Drawing.Color.Black;
-      this.txtEmail.Location = new System.Drawing.Point(102, 272);
+      this.txtEmail.Location = new System.Drawing.Point(106, 272);
       this.txtEmail.MaxLength = 60;
       this.txtEmail.Name = "txtEmail";
       this.txtEmail.PrtAceitaEspaco = false;

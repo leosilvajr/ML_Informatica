@@ -56,6 +56,7 @@
     <Compile Include="FirebirdDal.cs" />
     <Compile Include="MunicipioDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicosDal.cs" />
     <Compile Include="UtilDal.cs" />
   </ItemGroup>
   <ItemGroup>

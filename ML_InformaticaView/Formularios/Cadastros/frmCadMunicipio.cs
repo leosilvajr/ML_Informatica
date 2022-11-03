@@ -23,6 +23,7 @@ namespace ML_InformaticaView.Formularios.Cadastros
     public frmCadMunicipio()
     {
       InitializeComponent();
+      lblTituloForm.Text = "Cadastro de Municipios";
       municipio = new MunicipioEntidade();
       negocio = new MunicipioNegocio();
       MontaComboEstado();
@@ -162,20 +163,27 @@ namespace ML_InformaticaView.Formularios.Cadastros
       catch (Exception ex)
       {
         Mensagem.MostraErro(ex.Message);
-
-
       }
     }
 
     private void txtCodMunicipio_TextChanged(object sender, EventArgs e)
     {
-      if (this.ActiveControl == txtCodMunicipio)
-      {
-        txtCodMunicipio.PrtNaoLimparControle = true;
-        this.LimpaControles(this.Controls);
-        txtCodMunicipio.PrtNaoLimparControle = false;
-      }
+      //if (this.ActiveControl == txtCodMunicipio)
+      //{
+      //  txtCodMunicipio.PrtNaoLimparControle = true;
+      //  this.LimpaControles(this.Controls);
+      //  txtCodMunicipio.PrtNaoLimparControle = false;
+      //}
     }
 
+    private void txtCodMunicipio_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyCode == Keys.F3)
+      {
+        frmConsultaMunicipio consultaMunicipio = new frmConsultaMunicipio();
+        consultaMunicipio.SetRetornoConsultaCallback = new Util.DelegateRetornoConsulta<MunicipioEntidade>(RetornoConsultaCallbackFn);
+        Util.AbreForm(this, consultaMunicipio);
+      }
+    }
   }
 }

@@ -103,6 +103,8 @@
       // buttonEdit1
       // 
       this.buttonEdit1.BackColor = System.Drawing.Color.Transparent;
+      this.buttonEdit1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.buttonEdit1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.buttonEdit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.buttonEdit1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.buttonEdit1.ForeColor = System.Drawing.Color.Transparent;
@@ -126,6 +128,8 @@
       // btnCancelar
       // 
       this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+      this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
+      this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(80)))), ((int)(((byte)(110)))));
       this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnCancelar.ForeColor = System.Drawing.Color.Transparent;
