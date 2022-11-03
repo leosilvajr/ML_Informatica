@@ -342,5 +342,17 @@
   <ItemGroup>
     <None Include="Resources\json %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

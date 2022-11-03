@@ -92,9 +92,9 @@ namespace ML_InformaticaView.Formularios.Principal
         if (item is Button botao)
         {
           if (botao.ContainsFocus)
-            botao.BackColor = Color.FromArgb(112, 128, 144);
+            botao.BackColor = Color.FromArgb(2, 80, 110);//2; 80; 110
           else
-            botao.BackColor = Color.FromArgb(35, 40, 45); //Cor padrao
+            botao.BackColor = Color.FromArgb(1,60,90); //Cor padrao 1; 60; 90
         }
       }
     }

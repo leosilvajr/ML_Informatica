@@ -104,7 +104,7 @@
       this.lblStatus.AutoSize = true;
       this.lblStatus.BackColor = System.Drawing.Color.Transparent;
       this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.lblStatus.ForeColor = System.Drawing.Color.Navy;
+      this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.lblStatus.Location = new System.Drawing.Point(242, 5);
       this.lblStatus.Name = "lblStatus";
       this.lblStatus.PrtMontaTelaAutomatico = false;
@@ -286,7 +286,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+      this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.ClientSize = new System.Drawing.Size(675, 450);
       this.Name = "frmBaseCadastro";
       this.Text = "frmBaseCadastro";

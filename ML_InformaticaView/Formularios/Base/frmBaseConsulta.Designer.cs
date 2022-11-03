@@ -50,6 +50,7 @@
       // 
       // pnlTopo
       // 
+      this.pnlTopo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.pnlTopo.Size = new System.Drawing.Size(653, 29);
       // 
       // pnlBase
@@ -128,7 +129,7 @@
       this.btnTipoBusca.BackColor = System.Drawing.Color.Transparent;
       this.btnTipoBusca.FlatAppearance.BorderSize = 2;
       this.btnTipoBusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-      this.btnTipoBusca.ForeColor = System.Drawing.Color.Green;
+      this.btnTipoBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.btnTipoBusca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnTipoBusca.Location = new System.Drawing.Point(5, 13);
       this.btnTipoBusca.Name = "btnTipoBusca";
@@ -336,6 +337,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.ClientSize = new System.Drawing.Size(663, 450);
       this.Name = "frmBaseConsulta";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

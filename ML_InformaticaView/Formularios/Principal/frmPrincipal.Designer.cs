@@ -83,7 +83,7 @@
       this.pnlBase.Controls.Add(this.menuStripCadastros);
       this.pnlBase.Controls.Add(this.menuStripConfiguracoes);
       this.pnlBase.Location = new System.Drawing.Point(200, 29);
-      this.pnlBase.Size = new System.Drawing.Size(1090, 587);
+      this.pnlBase.Size = new System.Drawing.Size(1090, 593);
       // 
       // btnSair
       // 
@@ -105,6 +105,7 @@
       // 
       // pnlMenu
       // 
+      this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.pnlMenu.Controls.Add(this.btnEncerrar);
       this.pnlMenu.Controls.Add(this.btnUltilitarios);
       this.pnlMenu.Controls.Add(this.btnConfiguracoes);
@@ -249,7 +250,7 @@
       this.btnCadastros.TabIndex = 9;
       this.btnCadastros.Text = "             Cadastros";
       this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.btnCadastros.UseVisualStyleBackColor = true;
+      this.btnCadastros.UseVisualStyleBackColor = false;
       this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
       // 
       // btnInicio
@@ -320,6 +321,7 @@
       // 
       // pnlBarraDireita
       // 
+      this.pnlBarraDireita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.pnlBarraDireita.Dock = System.Windows.Forms.DockStyle.Right;
       this.pnlBarraDireita.Location = new System.Drawing.Point(1290, 0);
       this.pnlBarraDireita.Name = "pnlBarraDireita";
@@ -329,13 +331,14 @@
       // 
       // pnlRodape
       // 
+      this.pnlRodape.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.pnlRodape.Controls.Add(this.lblHorario);
       this.pnlRodape.Controls.Add(this.lblData);
       this.pnlRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-      this.pnlRodape.Location = new System.Drawing.Point(200, 616);
+      this.pnlRodape.Location = new System.Drawing.Point(200, 622);
       this.pnlRodape.Name = "pnlRodape";
       this.pnlRodape.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlRodape.Size = new System.Drawing.Size(1090, 29);
+      this.pnlRodape.Size = new System.Drawing.Size(1090, 23);
       this.pnlRodape.TabIndex = 4;
       // 
       // lblHorario
@@ -344,7 +347,7 @@
       this.lblHorario.BackColor = System.Drawing.Color.Transparent;
       this.lblHorario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblHorario.ForeColor = System.Drawing.Color.White;
-      this.lblHorario.Location = new System.Drawing.Point(174, 4);
+      this.lblHorario.Location = new System.Drawing.Point(174, 2);
       this.lblHorario.Name = "lblHorario";
       this.lblHorario.PrtMontaTelaAutomatico = false;
       this.lblHorario.PrtNaoLimparControle = true;
@@ -361,7 +364,7 @@
       this.lblData.BackColor = System.Drawing.Color.Transparent;
       this.lblData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.lblData.ForeColor = System.Drawing.Color.White;
-      this.lblData.Location = new System.Drawing.Point(3, 4);
+      this.lblData.Location = new System.Drawing.Point(3, 2);
       this.lblData.Name = "lblData";
       this.lblData.PrtMontaTelaAutomatico = false;
       this.lblData.PrtNaoLimparControle = true;
@@ -508,6 +511,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.ClientSize = new System.Drawing.Size(1300, 650);
       this.Controls.Add(this.pnlRodape);
       this.Controls.Add(this.pnlBarraDireita);
