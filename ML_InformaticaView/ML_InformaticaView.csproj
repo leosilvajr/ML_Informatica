@@ -151,6 +151,12 @@
     <Compile Include="Formularios\Principal\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Ultilitarios\frmLerXmlNfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ultilitarios\frmLerXmlNfe.Designer.cs">
+      <DependentUpon>frmLerXmlNfe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Funcoes\Constantes.cs" />
     <Compile Include="Funcoes\Mensagem.cs" />
     <Compile Include="Funcoes\MetodosExtensao.cs" />
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ultilitarios\frmLerXmlNfe.resx">
+      <DependentUpon>frmLerXmlNfe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

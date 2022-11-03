@@ -166,8 +166,6 @@ namespace ML_Informatica.Dal
 
       return retorno;
     }
-
-
     /// <summary>
     /// retorna apenas alguns campos selecionados da tabela
     /// </summary>

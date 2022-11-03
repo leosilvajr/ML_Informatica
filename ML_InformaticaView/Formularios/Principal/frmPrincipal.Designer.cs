@@ -59,6 +59,8 @@
       this.menuStripUltilitarios = new Controles.MenuStripEdit();
       this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+      this.nFeSEFAZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.leituraXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.timer = new System.Windows.Forms.Timer(this.components);
       this.pnlTopo.SuspendLayout();
       this.pnlBase.SuspendLayout();
@@ -75,7 +77,7 @@
       // pnlTopo
       // 
       this.pnlTopo.Location = new System.Drawing.Point(200, 0);
-      this.pnlTopo.Size = new System.Drawing.Size(890, 29);
+      this.pnlTopo.Size = new System.Drawing.Size(990, 29);
       // 
       // pnlBase
       // 
@@ -84,19 +86,19 @@
       this.pnlBase.Controls.Add(this.menuStripCadastros);
       this.pnlBase.Controls.Add(this.menuStripConfiguracoes);
       this.pnlBase.Location = new System.Drawing.Point(200, 29);
-      this.pnlBase.Size = new System.Drawing.Size(890, 543);
+      this.pnlBase.Size = new System.Drawing.Size(990, 643);
       // 
       // btnSair
       // 
       this.btnSair.FlatAppearance.BorderSize = 0;
       this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-      this.btnSair.Location = new System.Drawing.Point(866, 0);
+      this.btnSair.Location = new System.Drawing.Point(966, 0);
       // 
       // btnMinimizar
       // 
       this.btnMinimizar.FlatAppearance.BorderSize = 0;
       this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-      this.btnMinimizar.Location = new System.Drawing.Point(842, 0);
+      this.btnMinimizar.Location = new System.Drawing.Point(942, 0);
       // 
       // lblTituloForm
       // 
@@ -330,10 +332,10 @@
       // 
       this.pnlBarraDireita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.pnlBarraDireita.Dock = System.Windows.Forms.DockStyle.Right;
-      this.pnlBarraDireita.Location = new System.Drawing.Point(1090, 0);
+      this.pnlBarraDireita.Location = new System.Drawing.Point(1190, 0);
       this.pnlBarraDireita.Name = "pnlBarraDireita";
       this.pnlBarraDireita.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlBarraDireita.Size = new System.Drawing.Size(5, 595);
+      this.pnlBarraDireita.Size = new System.Drawing.Size(5, 695);
       this.pnlBarraDireita.TabIndex = 3;
       // 
       // pnlRodape
@@ -342,10 +344,10 @@
       this.pnlRodape.Controls.Add(this.lblHorario);
       this.pnlRodape.Controls.Add(this.lblData);
       this.pnlRodape.Dock = System.Windows.Forms.DockStyle.Bottom;
-      this.pnlRodape.Location = new System.Drawing.Point(200, 572);
+      this.pnlRodape.Location = new System.Drawing.Point(200, 672);
       this.pnlRodape.Name = "pnlRodape";
       this.pnlRodape.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlRodape.Size = new System.Drawing.Size(890, 23);
+      this.pnlRodape.Size = new System.Drawing.Size(990, 23);
       this.pnlRodape.TabIndex = 4;
       // 
       // lblHorario
@@ -439,21 +441,21 @@
       // toolStripMenuItem2
       // 
       this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-      this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+      this.toolStripMenuItem2.Size = new System.Drawing.Size(133, 22);
       this.toolStripMenuItem2.Text = "Clientes";
       this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
       // 
       // municípiosToolStripMenuItem
       // 
       this.municípiosToolStripMenuItem.Name = "municípiosToolStripMenuItem";
-      this.municípiosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.municípiosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
       this.municípiosToolStripMenuItem.Text = "Municípios";
       this.municípiosToolStripMenuItem.Click += new System.EventHandler(this.municípiosToolStripMenuItem_Click);
       // 
       // serviçosToolStripMenuItem
       // 
       this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-      this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
       this.serviçosToolStripMenuItem.Text = "Serviços";
       this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
       // 
@@ -494,10 +496,11 @@
       // 
       this.menuStripUltilitarios.BackColor = System.Drawing.SystemColors.ControlLight;
       this.menuStripUltilitarios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem5});
+            this.toolStripMenuItem5,
+            this.nFeSEFAZToolStripMenuItem});
       this.menuStripUltilitarios.Location = new System.Drawing.Point(0, 0);
       this.menuStripUltilitarios.Name = "menuStripUltilitarios";
-      this.menuStripUltilitarios.Size = new System.Drawing.Size(1090, 24);
+      this.menuStripUltilitarios.Size = new System.Drawing.Size(890, 24);
       this.menuStripUltilitarios.TabIndex = 3;
       this.menuStripUltilitarios.Text = "menuStripEdit1";
       this.menuStripUltilitarios.Visible = false;
@@ -517,6 +520,21 @@
       this.toolStripMenuItem6.Text = "Calculadora";
       this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
       // 
+      // nFeSEFAZToolStripMenuItem
+      // 
+      this.nFeSEFAZToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.leituraXMLToolStripMenuItem});
+      this.nFeSEFAZToolStripMenuItem.Name = "nFeSEFAZToolStripMenuItem";
+      this.nFeSEFAZToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+      this.nFeSEFAZToolStripMenuItem.Text = "NF-e SEFAZ";
+      // 
+      // leituraXMLToolStripMenuItem
+      // 
+      this.leituraXMLToolStripMenuItem.Name = "leituraXMLToolStripMenuItem";
+      this.leituraXMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.leituraXMLToolStripMenuItem.Text = "Leitura XML";
+      this.leituraXMLToolStripMenuItem.Click += new System.EventHandler(this.leituraXMLToolStripMenuItem_Click);
+      // 
       // timer
       // 
       this.timer.Enabled = true;
@@ -527,7 +545,7 @@
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
-      this.ClientSize = new System.Drawing.Size(1100, 600);
+      this.ClientSize = new System.Drawing.Size(1200, 700);
       this.Controls.Add(this.pnlRodape);
       this.Controls.Add(this.pnlBarraDireita);
       this.Controls.Add(this.pnlMenu);
@@ -596,5 +614,7 @@
         private Controles.LabelEdit lblData;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripMenuItem serviçosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nFeSEFAZToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem leituraXMLToolStripMenuItem;
     }
 }

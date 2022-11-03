@@ -17,7 +17,7 @@ namespace Controles
       if (obj is CheckBoxEdit checkbox)
         checkbox.BackColor = Color.Transparent; //SystemColors.Control;
       else if (obj is ButtonEdit button)
-        button.BackColor = Color.PowderBlue;
+        button.BackColor = Color.White;
       else if (obj is LabelEdit label)
         label.BackColor = Color.Transparent;
       else if (obj is GroupBoxEdit group)

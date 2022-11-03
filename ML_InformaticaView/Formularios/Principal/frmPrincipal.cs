@@ -1,6 +1,7 @@
 ﻿using Funcionarios.Formularios;
 using ML_InformaticaView.Formularios.Cadastros;
 using ML_InformaticaView.Formularios.Configuracoes;
+using ML_InformaticaView.Formularios.Ultilitarios;
 using ML_InformaticaView.Funcoes;
 using System;
 using System.Collections.Generic;
@@ -208,6 +209,12 @@ namespace ML_InformaticaView.Formularios.Principal
     {
       frmCadServico cadServico = new frmCadServico();
       Util.AbreForm(pnlBase, cadServico);
+    }
+
+    private void leituraXMLToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      frmLerXmlNfe xml = new frmLerXmlNfe();
+      Util.AbreForm(pnlBase, xml);
     }
   }
 }
