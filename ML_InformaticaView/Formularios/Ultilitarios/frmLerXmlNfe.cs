@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.WebPages;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
@@ -17,6 +18,7 @@ namespace ML_InformaticaView.Formularios.Ultilitarios
 {
   public partial class frmLerXmlNfe : frmBase
   {
+    static string arquivoFileNameXml = "";
     public frmLerXmlNfe()
     {
       InitializeComponent();
@@ -29,13 +31,14 @@ namespace ML_InformaticaView.Formularios.Ultilitarios
     {
       LerXml();
     }
-    private void LerXml()
+    public void LerXml()
     {
       try
       {
         if (openFileXml.ShowDialog() == System.Windows.Forms.DialogResult.OK)
         {
           txtpathXml.Text = openFileXml.FileName;
+          arquivoFileNameXml = openFileXml.FileName;
 
           NFeSerialization serializable = new NFeSerialization();
           var nfe = serializable.ObterObjetoXml<NFeProc>(txtpathXml.Text);
@@ -97,15 +100,36 @@ namespace ML_InformaticaView.Formularios.Ultilitarios
         ListaItens.Add(
              new Produto()
              {
-               Codigo = nodo.GetElementsByTagName("cProd")[0].InnerText.Trim(),
-               Descricao = nodo.GetElementsByTagName("xProd")[0].InnerText.Trim(),
-               CFOP = nodo.GetElementsByTagName("CFOP")[0].InnerText.TrimEnd(),
-               NCM = nodo.GetElementsByTagName("NCM")[0].InnerText.TrimEnd(),
-
+               cProd = nodo.GetElementsByTagName("cProd")[0].InnerText.Trim(),
+               cEAN = nodo.GetElementsByTagName("cEAN")[0].InnerText.Trim(),
+               xProd = nodo.GetElementsByTagName("xProd")[0].InnerText.Trim(),
+               CFOP = nodo.GetElementsByTagName("CFOP")[0].InnerText.Trim(),
+               NCM = nodo.GetElementsByTagName("NCM")[0].InnerText.Trim(),
+               uCom = nodo.GetElementsByTagName("uCom")[0].InnerText.Trim(),
+               qCom = nodo.GetElementsByTagName("qCom")[0].InnerText.Trim(),
+               vUnCom = nodo.GetElementsByTagName("vUnCom")[0].InnerText.Trim(),
+  
              });
       }
       dgvDados.DataSource = ListaItens;
+
+      //Removendo Colunas
       dgvDados.Columns.Remove("cEAN");
+      //Largura das Coluna
+      dgvDados.Columns["cProd"].Width = 70;
+      dgvDados.Columns["xProd"].Width = 300;
+      dgvDados.Columns["NCM"].Width = 70;
+      dgvDados.Columns["CFOP"].Width = 40;
+      dgvDados.Columns["uCom"].Width = 50;
+      dgvDados.Columns["qCom"].Width = 70;
+      dgvDados.Columns["vUnCom"].Width = 70;
+
+      //Renomeando Colunas
+      dgvDados.Columns["cProd"].HeaderText = "Código";
+      dgvDados.Columns["xProd"].HeaderText = "Descrição";
+      dgvDados.Columns["uCom"].HeaderText = "Un.Com.";
+      dgvDados.Columns["qCom"].HeaderText = "Qtde.Com.";
+      dgvDados.Columns["vUnCom"].HeaderText = "Valor Un.";
 
     }
   }
