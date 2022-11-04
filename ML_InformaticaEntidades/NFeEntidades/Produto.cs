@@ -8,13 +8,13 @@ namespace ML_InformaticaEntidades.NFeEntidades
 {
   public class Produto
   {
-    public string cProd { get; set; }
+    public string Codigo { get; set; } //cProd
     public string cEAN { get; set; }
-    public string xProd { get; set; }
-    public string NCM { get; set; }
-    public string CFOP { get; set; }
-    public string uCom { get; set; }
-    public double qCom { get; set; }
+    public string Descricao { get; set; } //xProd
+    public string NCM { get; set; }  //NCM
+    public string CFOP { get; set; } //CFOP
+    public string uCom { get; set; }  //PC
+    public double qCom { get; set; }  
     public double vUnCom { get; set; }
   }
 }

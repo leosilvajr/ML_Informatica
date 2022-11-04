@@ -1,4 +1,6 @@
 ﻿using Funcionarios.Formularios;
+using ML_InformaticaEntidades.NFeEntidades;
+using ML_InformaticaNegocios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace ML_InformaticaView.Formularios.Ultilitarios
 {
@@ -22,84 +25,88 @@ namespace ML_InformaticaView.Formularios.Ultilitarios
       lblTituloForm.Text = "Ler XML da NF-e";
     }
 
-    private void LerXmlNfe()
+    private void buttonEdit1_Click(object sender, EventArgs e)
     {
-      var arquivo = @"C:\WorkspaceGit\ML_Informatica\NFe\nfe.xml";
-      var item = "";
-      var cProd = "";
-      var xProd = "";
-      var qCom = "";
-      var vUnCom = "";
-      var vProd = "";
-
-      //Instanciando um Objeto XMLReader e apontando para o arquivo do diretorio 
-      using (XmlReader meuXml = XmlReader.Create(arquivo))
+      LerXml();
+    }
+    private void LerXml()
+    {
+      try
       {
-
-        var fimItens = false;
-
-        //Lendo o XML
-        while (meuXml.Read())
+        if (openFileXml.ShowDialog() == System.Windows.Forms.DialogResult.OK)
         {
-          // ---- Cabeçalho
-          if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "natOp")
-            lblNaturezaOperacao.Text = meuXml.ReadElementString();
+          txtpathXml.Text = openFileXml.FileName;
 
-          if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "nNF")
-            lblNfNum.Text = meuXml.ReadElementString();
+          NFeSerialization serializable = new NFeSerialization();
+          var nfe = serializable.ObterObjetoXml<NFeProc>(txtpathXml.Text);
 
-
-          if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "dhEmi")
-            lblNfData.Text = meuXml.ReadElementString();
-
-          //----- Itens da Nfe
-          if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "det")
+          if (nfe == null)
           {
-            //Lendo atributo da tag <det>
-            item = meuXml.GetAttribute("nItem");
-            cProd = "";
-            xProd = "";
-            qCom = "";
-            vUnCom = "";
-            vProd = "";
+            MessageBox.Show("Falha ao ler o arquivo xml. Verifique se o arquivo é de uma NF-e/NFC-e autorizada!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
           }
-          else if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "total")
+          else
           {
-            fimItens = true;
+            popularForm(nfe);
+            MessageBox.Show("Arquivo xml da Nota Fiscal lido com Sucesso!", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Information);
           }
-
-          if (!fimItens)
-          {
-            if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "cProd")
-            cProd = meuXml.ReadElementString();
-
-            if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "xProd")
-            xProd = meuXml.ReadElementString();
-
-            if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "qCom")
-             qCom = meuXml.ReadElementString().Replace(".", ",");
-
-            if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "vUnCom")
-              vUnCom = meuXml.ReadElementString().Replace(".", ",")+" R$";
-
-            if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "vProd")
-            {
-              vProd = meuXml.ReadElementString().Replace(".", ",") + " R$";
-              listView.Items.Add(new ListViewItem(new[] {item,cProd,xProd,qCom,vUnCom.ToString
-                (),vProd.ToString().Replace(".",",")}));
-            }
-
-          }
-          //---Rodapé
-          if (meuXml.NodeType == XmlNodeType.Element && meuXml.Name == "vNF")
-            lblValorTotal.Text = meuXml.ReadElementString().Replace(".", ",") + " R$";
         }
       }
+      catch (Exception)
+      {
+        MessageBox.Show("Falha no processo de leitura do arquivo xml da Nota Fiscal.", "Aviso - Leitura do Arquivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+      }
     }
-
-    private void btnAbrir_Click(object sender, EventArgs e)
+    private void popularForm(NFeProc nfe)
     {
-      LerXmlNfe();
+      /* Populando tab Identificação */
+      txtNaturezaOperacao.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.natOp;
+      txtNumero.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.nNF;
+      txtModelo.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.mod;
+      txtSerie.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.serie.ToString();
+      txtDataEmissao.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Identificacao.dhEmi.ToShortDateString();
+
+      /* Populando tab Emitente */
+      txtRazaoSocial.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.xNome;
+      txtNomeFantasia.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.xFant;
+      txtCpfCnpjEmitente.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.CNPJ;
+      txtInscricaoEstadual.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.IE;
+      txtLogradouroEmitente.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.Endereco.xLgr;
+      txtNroEmitente.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.Endereco.nro;
+      txtMunicipioEmitente.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.Endereco.xMun;
+      txtUFEmitente.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Emitente.Endereco.UF;
+
+      /* Populando tab Destinatário */
+      txtDestNomeFantasia.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.xNome;
+      txtDestCpfCnpj.Text = string.IsNullOrEmpty(nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ) ? nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CPF : nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.CNPJ;
+      txtDestEmail.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.email;
+      txtDestLogradouro.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xLgr;
+      txtDestNumero.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.nro;
+      txtDestMunicipio.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xMun;
+      txtDestUF.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.UF;
+      txtDestCEP.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.CEP;
+      txtDestBairro.Text = nfe.NotaFiscalEletronica.InformacoesNFe.Destinatario.Endereco.xBairro;
+
+      /* Populando tab Itens */
+      List<Produto> ListaItens = new List<Produto>();
+      XmlDocument doc = new XmlDocument();
+      doc.Load(openFileXml.FileName);
+      var proditens = doc.GetElementsByTagName("prod");
+
+      foreach (XmlElement nodo in proditens)
+      {
+        ListaItens.Add(
+             new Produto()
+             {
+               Codigo = nodo.GetElementsByTagName("cProd")[0].InnerText.Trim(),
+               Descricao = nodo.GetElementsByTagName("xProd")[0].InnerText.Trim(),
+               CFOP = nodo.GetElementsByTagName("CFOP")[0].InnerText.TrimEnd(),
+               NCM = nodo.GetElementsByTagName("NCM")[0].InnerText.TrimEnd(),
+
+             });
+      }
+      dgvDados.DataSource = ListaItens;
+      dgvDados.Columns.Remove("cEAN");
+
     }
   }
 }
