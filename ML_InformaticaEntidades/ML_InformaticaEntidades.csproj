@@ -50,6 +50,15 @@
     <Compile Include="ItensComboBoxEntidade.cs" />
     <Compile Include="JsonGeneric.cs" />
     <Compile Include="MunicipioEntidade.cs" />
+    <Compile Include="NFeEntidades\Destinatario.cs" />
+    <Compile Include="NFeEntidades\Detalhe.cs" />
+    <Compile Include="NFeEntidades\Emitente.cs" />
+    <Compile Include="NFeEntidades\Endereco.cs" />
+    <Compile Include="NFeEntidades\Identificacao.cs" />
+    <Compile Include="NFeEntidades\NFe.cs" />
+    <Compile Include="NFeEntidades\NFeProc.cs" />
+    <Compile Include="NFeEntidades\Produto.cs" />
+    <Compile Include="PedidoEntidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicosEntidade.cs" />
     <Compile Include="TelasConsultaEntidade.cs" />
