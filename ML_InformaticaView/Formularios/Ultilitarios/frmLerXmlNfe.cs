@@ -1,6 +1,7 @@
 ﻿using Funcionarios.Formularios;
 using ML_InformaticaEntidades.NFeEntidades;
 using ML_InformaticaNegocios;
+using ML_InformaticaView.Funcoes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,7 +108,7 @@ namespace ML_InformaticaView.Formularios.Ultilitarios
                NCM = nodo.GetElementsByTagName("NCM")[0].InnerText.Trim(),
                uCom = nodo.GetElementsByTagName("uCom")[0].InnerText.Trim(),
                qCom = nodo.GetElementsByTagName("qCom")[0].InnerText.Trim(),
-               vUnCom = nodo.GetElementsByTagName("vUnCom")[0].InnerText.Trim(),
+               vUnCom = nodo.GetElementsByTagName("vUnCom")[0].InnerText.Trim().GetToDecimalNFeExt(),
   
              });
       }

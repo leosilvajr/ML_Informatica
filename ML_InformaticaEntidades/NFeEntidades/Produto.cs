@@ -15,6 +15,6 @@ namespace ML_InformaticaEntidades.NFeEntidades
     public string CFOP { get; set; } //CFOP
     public string uCom { get; set; }  //PC
     public string qCom { get; set; }  
-    public string vUnCom { get; set; }
+    public decimal vUnCom { get; set; }
   }
 }

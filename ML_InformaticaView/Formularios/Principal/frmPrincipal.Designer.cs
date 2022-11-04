@@ -81,8 +81,8 @@
       // 
       // pnlBase
       // 
-      this.pnlBase.Controls.Add(this.menuStripUltilitarios);
       this.pnlBase.Controls.Add(this.menuStripRelatorios);
+      this.pnlBase.Controls.Add(this.menuStripUltilitarios);
       this.pnlBase.Controls.Add(this.menuStripCadastros);
       this.pnlBase.Controls.Add(this.menuStripConfiguracoes);
       this.pnlBase.Location = new System.Drawing.Point(200, 29);
@@ -396,7 +396,7 @@
             this.bancoDeDadosToolStripMenuItem});
       this.menuStripConfiguracoes.Location = new System.Drawing.Point(0, 0);
       this.menuStripConfiguracoes.Name = "menuStripConfiguracoes";
-      this.menuStripConfiguracoes.Size = new System.Drawing.Size(1090, 24);
+      this.menuStripConfiguracoes.Size = new System.Drawing.Size(990, 24);
       this.menuStripConfiguracoes.TabIndex = 0;
       this.menuStripConfiguracoes.Text = "menuStripEdit1";
       this.menuStripConfiguracoes.Visible = false;
@@ -423,7 +423,7 @@
             this.toolStripMenuItem1});
       this.menuStripCadastros.Location = new System.Drawing.Point(0, 0);
       this.menuStripCadastros.Name = "menuStripCadastros";
-      this.menuStripCadastros.Size = new System.Drawing.Size(890, 24);
+      this.menuStripCadastros.Size = new System.Drawing.Size(990, 24);
       this.menuStripCadastros.TabIndex = 1;
       this.menuStripCadastros.Text = "menuStripEdit1";
       this.menuStripCadastros.Visible = false;
@@ -467,7 +467,7 @@
             this.movimentaçõesToolStripMenuItem});
       this.menuStripRelatorios.Location = new System.Drawing.Point(0, 0);
       this.menuStripRelatorios.Name = "menuStripRelatorios";
-      this.menuStripRelatorios.Size = new System.Drawing.Size(1090, 24);
+      this.menuStripRelatorios.Size = new System.Drawing.Size(990, 24);
       this.menuStripRelatorios.TabIndex = 2;
       this.menuStripRelatorios.Text = "menuStripEdit1";
       this.menuStripRelatorios.Visible = false;
@@ -500,7 +500,7 @@
             this.nFeSEFAZToolStripMenuItem});
       this.menuStripUltilitarios.Location = new System.Drawing.Point(0, 0);
       this.menuStripUltilitarios.Name = "menuStripUltilitarios";
-      this.menuStripUltilitarios.Size = new System.Drawing.Size(890, 24);
+      this.menuStripUltilitarios.Size = new System.Drawing.Size(990, 24);
       this.menuStripUltilitarios.TabIndex = 3;
       this.menuStripUltilitarios.Text = "menuStripEdit1";
       this.menuStripUltilitarios.Visible = false;
@@ -525,14 +525,14 @@
       this.nFeSEFAZToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.leituraXMLToolStripMenuItem});
       this.nFeSEFAZToolStripMenuItem.Name = "nFeSEFAZToolStripMenuItem";
-      this.nFeSEFAZToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-      this.nFeSEFAZToolStripMenuItem.Text = "NF-e SEFAZ";
+      this.nFeSEFAZToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+      this.nFeSEFAZToolStripMenuItem.Text = "Arquivo";
       // 
       // leituraXMLToolStripMenuItem
       // 
       this.leituraXMLToolStripMenuItem.Name = "leituraXMLToolStripMenuItem";
       this.leituraXMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-      this.leituraXMLToolStripMenuItem.Text = "Leitura XML";
+      this.leituraXMLToolStripMenuItem.Text = "Ler XML NF-e";
       this.leituraXMLToolStripMenuItem.Click += new System.EventHandler(this.leituraXMLToolStripMenuItem_Click);
       // 
       // timer
