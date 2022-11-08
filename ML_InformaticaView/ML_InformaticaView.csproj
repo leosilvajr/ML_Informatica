@@ -151,6 +151,12 @@
     <Compile Include="Formularios\Principal\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Ultilitarios\frmControleMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ultilitarios\frmControleMenu.Designer.cs">
+      <DependentUpon>frmControleMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Ultilitarios\frmLerXmlNfe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ultilitarios\frmControleMenu.resx">
+      <DependentUpon>frmControleMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ultilitarios\frmLerXmlNfe.resx">
       <DependentUpon>frmLerXmlNfe.cs</DependentUpon>

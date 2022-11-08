@@ -53,7 +53,7 @@
       // 
       this.pnlBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
       this.pnlBase.Controls.Add(this.pnlBaseCadastro);
-      this.pnlBase.Size = new System.Drawing.Size(665, 416);
+      this.pnlBase.Size = new System.Drawing.Size(665, 406);
       // 
       // btnSair
       // 
@@ -84,7 +84,7 @@
       this.pnlBaseCadastro.Name = "pnlBaseCadastro";
       this.pnlBaseCadastro.Padding = new System.Windows.Forms.Padding(2);
       this.pnlBaseCadastro.PrtBorderColor = System.Drawing.Color.Transparent;
-      this.pnlBaseCadastro.Size = new System.Drawing.Size(665, 416);
+      this.pnlBaseCadastro.Size = new System.Drawing.Size(665, 406);
       this.pnlBaseCadastro.TabIndex = 0;
       // 
       // pnlStatus
@@ -289,6 +289,7 @@
       this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(60)))), ((int)(((byte)(90)))));
       this.ClientSize = new System.Drawing.Size(675, 450);
       this.Name = "frmBaseCadastro";
+      this.Padding = new System.Windows.Forms.Padding(5, 0, 5, 15);
       this.Text = "frmBaseCadastro";
       this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBaseCadastro_KeyDown);
       this.pnlTopo.ResumeLayout(false);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
       this.components = new System.ComponentModel.Container();
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
       this.pnlMenu = new Controles.PanelEdit();
       this.btnEncerrar = new Controles.ButtonEdit();
       this.btnUltilitarios = new Controles.ButtonEdit();
@@ -47,6 +48,9 @@
       this.menuStripConfiguracoes = new Controles.MenuStripEdit();
       this.bancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.configurarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.controleDeAcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.habilitarDesabilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.menuStripCadastros = new Controles.MenuStripEdit();
       this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,9 +85,9 @@
       // 
       // pnlBase
       // 
+      this.pnlBase.Controls.Add(this.menuStripCadastros);
       this.pnlBase.Controls.Add(this.menuStripRelatorios);
       this.pnlBase.Controls.Add(this.menuStripUltilitarios);
-      this.pnlBase.Controls.Add(this.menuStripCadastros);
       this.pnlBase.Controls.Add(this.menuStripConfiguracoes);
       this.pnlBase.Location = new System.Drawing.Point(200, 29);
       this.pnlBase.Size = new System.Drawing.Size(990, 643);
@@ -136,7 +140,7 @@
       this.btnEncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnEncerrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnEncerrar.ForeColor = System.Drawing.Color.White;
-      this.btnEncerrar.Image = global::ML_InformaticaView.Properties.Resources.logout;
+      this.btnEncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEncerrar.Image")));
       this.btnEncerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnEncerrar.Location = new System.Drawing.Point(0, 340);
       this.btnEncerrar.Name = "btnEncerrar";
@@ -163,7 +167,7 @@
       this.btnUltilitarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnUltilitarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnUltilitarios.ForeColor = System.Drawing.Color.White;
-      this.btnUltilitarios.Image = global::ML_InformaticaView.Properties.Resources.utility;
+      this.btnUltilitarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUltilitarios.Image")));
       this.btnUltilitarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnUltilitarios.Location = new System.Drawing.Point(0, 292);
       this.btnUltilitarios.Name = "btnUltilitarios";
@@ -175,6 +179,7 @@
       this.btnUltilitarios.PrtToolTipMensagem = null;
       this.btnUltilitarios.Size = new System.Drawing.Size(195, 48);
       this.btnUltilitarios.TabIndex = 12;
+      this.btnUltilitarios.Tag = "Ultilitários";
       this.btnUltilitarios.Text = "             Ultilitários";
       this.btnUltilitarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnUltilitarios.UseVisualStyleBackColor = true;
@@ -190,7 +195,7 @@
       this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnConfiguracoes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnConfiguracoes.ForeColor = System.Drawing.Color.White;
-      this.btnConfiguracoes.Image = global::ML_InformaticaView.Properties.Resources.admin;
+      this.btnConfiguracoes.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracoes.Image")));
       this.btnConfiguracoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnConfiguracoes.Location = new System.Drawing.Point(0, 244);
       this.btnConfiguracoes.Name = "btnConfiguracoes";
@@ -202,6 +207,7 @@
       this.btnConfiguracoes.PrtToolTipMensagem = null;
       this.btnConfiguracoes.Size = new System.Drawing.Size(195, 48);
       this.btnConfiguracoes.TabIndex = 11;
+      this.btnConfiguracoes.Tag = "Configurações";
       this.btnConfiguracoes.Text = "             Configurações";
       this.btnConfiguracoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnConfiguracoes.UseVisualStyleBackColor = true;
@@ -217,7 +223,7 @@
       this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnRelatorios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnRelatorios.ForeColor = System.Drawing.Color.White;
-      this.btnRelatorios.Image = global::ML_InformaticaView.Properties.Resources.seo_report;
+      this.btnRelatorios.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorios.Image")));
       this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnRelatorios.Location = new System.Drawing.Point(0, 196);
       this.btnRelatorios.Name = "btnRelatorios";
@@ -229,6 +235,7 @@
       this.btnRelatorios.PrtToolTipMensagem = null;
       this.btnRelatorios.Size = new System.Drawing.Size(195, 48);
       this.btnRelatorios.TabIndex = 10;
+      this.btnRelatorios.Tag = "Relatórios";
       this.btnRelatorios.Text = "             Relatórios";
       this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnRelatorios.UseVisualStyleBackColor = true;
@@ -244,7 +251,7 @@
       this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnCadastros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnCadastros.ForeColor = System.Drawing.Color.White;
-      this.btnCadastros.Image = global::ML_InformaticaView.Properties.Resources.add;
+      this.btnCadastros.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastros.Image")));
       this.btnCadastros.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
       this.btnCadastros.Location = new System.Drawing.Point(0, 148);
       this.btnCadastros.Name = "btnCadastros";
@@ -256,6 +263,7 @@
       this.btnCadastros.PrtToolTipMensagem = null;
       this.btnCadastros.Size = new System.Drawing.Size(195, 48);
       this.btnCadastros.TabIndex = 9;
+      this.btnCadastros.Tag = "Cadastros";
       this.btnCadastros.Text = "             Cadastros";
       this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnCadastros.UseVisualStyleBackColor = false;
@@ -271,7 +279,7 @@
       this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.btnInicio.ForeColor = System.Drawing.Color.White;
-      this.btnInicio.Image = global::ML_InformaticaView.Properties.Resources.home;
+      this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
       this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnInicio.Location = new System.Drawing.Point(0, 100);
       this.btnInicio.Name = "btnInicio";
@@ -319,7 +327,7 @@
       // picMenu
       // 
       this.picMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-      this.picMenu.Image = global::ML_InformaticaView.Properties.Resources.icons8_menu_321;
+      this.picMenu.Image = ((System.Drawing.Image)(resources.GetObject("picMenu.Image")));
       this.picMenu.Location = new System.Drawing.Point(5, 28);
       this.picMenu.Name = "picMenu";
       this.picMenu.Size = new System.Drawing.Size(42, 50);
@@ -393,7 +401,8 @@
       // 
       this.menuStripConfiguracoes.BackColor = System.Drawing.SystemColors.ControlLight;
       this.menuStripConfiguracoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bancoDeDadosToolStripMenuItem});
+            this.bancoDeDadosToolStripMenuItem,
+            this.controleDeAcessoToolStripMenuItem});
       this.menuStripConfiguracoes.Location = new System.Drawing.Point(0, 0);
       this.menuStripConfiguracoes.Name = "menuStripConfiguracoes";
       this.menuStripConfiguracoes.Size = new System.Drawing.Size(990, 24);
@@ -407,14 +416,42 @@
             this.configurarToolStripMenuItem});
       this.bancoDeDadosToolStripMenuItem.Name = "bancoDeDadosToolStripMenuItem";
       this.bancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+      this.bancoDeDadosToolStripMenuItem.Tag = "Banco de Dados";
       this.bancoDeDadosToolStripMenuItem.Text = "Banco de Dados";
       // 
       // configurarToolStripMenuItem
       // 
       this.configurarToolStripMenuItem.Name = "configurarToolStripMenuItem";
       this.configurarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+      this.configurarToolStripMenuItem.Tag = "Configurar";
       this.configurarToolStripMenuItem.Text = "Configurar";
       this.configurarToolStripMenuItem.Click += new System.EventHandler(this.configurarToolStripMenuItem_Click_1);
+      // 
+      // controleDeAcessoToolStripMenuItem
+      // 
+      this.controleDeAcessoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+      this.controleDeAcessoToolStripMenuItem.Name = "controleDeAcessoToolStripMenuItem";
+      this.controleDeAcessoToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
+      this.controleDeAcessoToolStripMenuItem.Tag = "Controle de Acesso";
+      this.controleDeAcessoToolStripMenuItem.Text = "Controle de Acesso";
+      // 
+      // menuToolStripMenuItem
+      // 
+      this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.habilitarDesabilitarToolStripMenuItem});
+      this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+      this.menuToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+      this.menuToolStripMenuItem.Tag = "Menu";
+      this.menuToolStripMenuItem.Text = "Menu";
+      // 
+      // habilitarDesabilitarToolStripMenuItem
+      // 
+      this.habilitarDesabilitarToolStripMenuItem.Name = "habilitarDesabilitarToolStripMenuItem";
+      this.habilitarDesabilitarToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+      this.habilitarDesabilitarToolStripMenuItem.Tag = "Habilitar/Desabilitar";
+      this.habilitarDesabilitarToolStripMenuItem.Text = "Habilitar/Desabilitar";
+      this.habilitarDesabilitarToolStripMenuItem.Click += new System.EventHandler(this.habilitarDesabilitarToolStripMenuItem_Click);
       // 
       // menuStripCadastros
       // 
@@ -436,12 +473,14 @@
             this.serviçosToolStripMenuItem});
       this.toolStripMenuItem1.Name = "toolStripMenuItem1";
       this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
+      this.toolStripMenuItem1.Tag = "Cadastros";
       this.toolStripMenuItem1.Text = "Cadastros";
       // 
       // toolStripMenuItem2
       // 
       this.toolStripMenuItem2.Name = "toolStripMenuItem2";
       this.toolStripMenuItem2.Size = new System.Drawing.Size(133, 22);
+      this.toolStripMenuItem2.Tag = "Clientes";
       this.toolStripMenuItem2.Text = "Clientes";
       this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
       // 
@@ -449,6 +488,7 @@
       // 
       this.municípiosToolStripMenuItem.Name = "municípiosToolStripMenuItem";
       this.municípiosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+      this.municípiosToolStripMenuItem.Tag = "Municípios";
       this.municípiosToolStripMenuItem.Text = "Municípios";
       this.municípiosToolStripMenuItem.Click += new System.EventHandler(this.municípiosToolStripMenuItem_Click);
       // 
@@ -456,6 +496,7 @@
       // 
       this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
       this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+      this.serviçosToolStripMenuItem.Tag = "Serviços";
       this.serviçosToolStripMenuItem.Text = "Serviços";
       this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
       // 
@@ -469,6 +510,7 @@
       this.menuStripRelatorios.Name = "menuStripRelatorios";
       this.menuStripRelatorios.Size = new System.Drawing.Size(990, 24);
       this.menuStripRelatorios.TabIndex = 2;
+      this.menuStripRelatorios.Tag = "";
       this.menuStripRelatorios.Text = "menuStripEdit1";
       this.menuStripRelatorios.Visible = false;
       // 
@@ -478,18 +520,21 @@
             this.clientesToolStripMenuItem});
       this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
       this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+      this.relatóriosToolStripMenuItem.Tag = "Relatórios";
       this.relatóriosToolStripMenuItem.Text = "Relatórios";
       // 
       // clientesToolStripMenuItem
       // 
       this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
       this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+      this.clientesToolStripMenuItem.Tag = "Clientes";
       this.clientesToolStripMenuItem.Text = "Clientes";
       // 
       // movimentaçõesToolStripMenuItem
       // 
       this.movimentaçõesToolStripMenuItem.Name = "movimentaçõesToolStripMenuItem";
       this.movimentaçõesToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+      this.movimentaçõesToolStripMenuItem.Tag = "Movimentações";
       this.movimentaçõesToolStripMenuItem.Text = "Movimentações";
       // 
       // menuStripUltilitarios
@@ -511,12 +556,14 @@
             this.toolStripMenuItem6});
       this.toolStripMenuItem5.Name = "toolStripMenuItem5";
       this.toolStripMenuItem5.Size = new System.Drawing.Size(75, 20);
+      this.toolStripMenuItem5.Tag = "Acessórios";
       this.toolStripMenuItem5.Text = "Acessórios";
       // 
       // toolStripMenuItem6
       // 
       this.toolStripMenuItem6.Name = "toolStripMenuItem6";
       this.toolStripMenuItem6.Size = new System.Drawing.Size(137, 22);
+      this.toolStripMenuItem6.Tag = "Calculadora";
       this.toolStripMenuItem6.Text = "Calculadora";
       this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
       // 
@@ -526,12 +573,14 @@
             this.leituraXMLToolStripMenuItem});
       this.nFeSEFAZToolStripMenuItem.Name = "nFeSEFAZToolStripMenuItem";
       this.nFeSEFAZToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+      this.nFeSEFAZToolStripMenuItem.Tag = "Arquivo";
       this.nFeSEFAZToolStripMenuItem.Text = "Arquivo";
       // 
       // leituraXMLToolStripMenuItem
       // 
       this.leituraXMLToolStripMenuItem.Name = "leituraXMLToolStripMenuItem";
-      this.leituraXMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+      this.leituraXMLToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+      this.leituraXMLToolStripMenuItem.Tag = "Ler XML NF-e";
       this.leituraXMLToolStripMenuItem.Text = "Ler XML NF-e";
       this.leituraXMLToolStripMenuItem.Click += new System.EventHandler(this.leituraXMLToolStripMenuItem_Click);
       // 
@@ -584,29 +633,18 @@
         #endregion
 
         private Controles.PanelEdit pnlMenu;
-        private Controles.ButtonEdit btnUltilitarios;
-        private Controles.ButtonEdit btnConfiguracoes;
-        private Controles.ButtonEdit btnRelatorios;
-        private Controles.ButtonEdit btnCadastros;
-        private Controles.ButtonEdit btnInicio;
-        private Controles.ButtonEdit btnEncerrar;
         private Controles.PanelEdit pnlBarraDireita;
         private Controles.PanelEdit pnlRodape;
         private Controles.PanelEdit pnlArtMenu;
         private Controles.PictureBoxEdit picMenu;
-        private System.Windows.Forms.Timer sidebarTimer;
         private Controles.LabelEdit lblMenu;
-        private Controles.MenuStripEdit menuStripConfiguracoes;
         private System.Windows.Forms.ToolStripMenuItem bancoDeDadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurarToolStripMenuItem;
-        private Controles.MenuStripEdit menuStripUltilitarios;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private Controles.MenuStripEdit menuStripRelatorios;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimentaçõesToolStripMenuItem;
-        private Controles.MenuStripEdit menuStripCadastros;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem municípiosToolStripMenuItem;
@@ -616,5 +654,19 @@
         private System.Windows.Forms.ToolStripMenuItem serviçosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nFeSEFAZToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem leituraXMLToolStripMenuItem;
+        public System.Windows.Forms.Timer sidebarTimer;
+        public Controles.MenuStripEdit menuStripConfiguracoes;
+        public Controles.MenuStripEdit menuStripUltilitarios;
+        public Controles.MenuStripEdit menuStripRelatorios;
+        public Controles.MenuStripEdit menuStripCadastros;
+        private System.Windows.Forms.ToolStripMenuItem controleDeAcessoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem habilitarDesabilitarToolStripMenuItem;
+        public Controles.ButtonEdit btnUltilitarios;
+        public Controles.ButtonEdit btnConfiguracoes;
+        public Controles.ButtonEdit btnRelatorios;
+        public Controles.ButtonEdit btnCadastros;
+        public Controles.ButtonEdit btnInicio;
+        public Controles.ButtonEdit btnEncerrar;
     }
 }

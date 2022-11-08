@@ -216,5 +216,11 @@ namespace ML_InformaticaView.Formularios.Principal
       frmLerXmlNfe xml = new frmLerXmlNfe();
       Util.AbreForm(pnlBase, xml);
     }
+
+    private void habilitarDesabilitarToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      frmControleMenu controleMenu = new frmControleMenu();
+      Util.AbreForm(pnlBase, controleMenu);
+    }
   }
 }
