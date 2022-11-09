@@ -14,7 +14,6 @@ namespace Funcionarios
   {
     static long? retornoLogin;
     public static int? codigoEmpresaAtiva;
-    public static int? codigoFilialAtiva;
     /// <summary>
     /// The main entry point for the application.
     /// </summary>

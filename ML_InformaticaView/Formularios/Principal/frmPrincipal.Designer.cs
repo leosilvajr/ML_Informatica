@@ -179,7 +179,7 @@
       this.btnUltilitarios.PrtToolTipMensagem = null;
       this.btnUltilitarios.Size = new System.Drawing.Size(195, 48);
       this.btnUltilitarios.TabIndex = 12;
-      this.btnUltilitarios.Tag = "Ultilitários";
+      this.btnUltilitarios.Tag = "Menu Ultilitários";
       this.btnUltilitarios.Text = "             Ultilitários";
       this.btnUltilitarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnUltilitarios.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@
       this.btnConfiguracoes.PrtToolTipMensagem = null;
       this.btnConfiguracoes.Size = new System.Drawing.Size(195, 48);
       this.btnConfiguracoes.TabIndex = 11;
-      this.btnConfiguracoes.Tag = "Configurações";
+      this.btnConfiguracoes.Tag = "Menu Configurações";
       this.btnConfiguracoes.Text = "             Configurações";
       this.btnConfiguracoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnConfiguracoes.UseVisualStyleBackColor = true;
@@ -235,7 +235,7 @@
       this.btnRelatorios.PrtToolTipMensagem = null;
       this.btnRelatorios.Size = new System.Drawing.Size(195, 48);
       this.btnRelatorios.TabIndex = 10;
-      this.btnRelatorios.Tag = "Relatórios";
+      this.btnRelatorios.Tag = "Menu Relatórios";
       this.btnRelatorios.Text = "             Relatórios";
       this.btnRelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnRelatorios.UseVisualStyleBackColor = true;
@@ -263,7 +263,7 @@
       this.btnCadastros.PrtToolTipMensagem = null;
       this.btnCadastros.Size = new System.Drawing.Size(195, 48);
       this.btnCadastros.TabIndex = 9;
-      this.btnCadastros.Tag = "Cadastros";
+      this.btnCadastros.Tag = "Menu Cadastros";
       this.btnCadastros.Text = "             Cadastros";
       this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.btnCadastros.UseVisualStyleBackColor = false;
@@ -631,8 +631,6 @@
         }
 
         #endregion
-
-        private Controles.PanelEdit pnlMenu;
         private Controles.PanelEdit pnlBarraDireita;
         private Controles.PanelEdit pnlRodape;
         private Controles.PanelEdit pnlArtMenu;
@@ -668,5 +666,6 @@
         public Controles.ButtonEdit btnCadastros;
         public Controles.ButtonEdit btnInicio;
         public Controles.ButtonEdit btnEncerrar;
+        protected Controles.PanelEdit pnlMenu;
     }
 }
